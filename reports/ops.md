@@ -37,12 +37,31 @@ DX-COM 2.5.0 emits `.dxnn` format v9 only and requires DX-RT >= 3.5.0; RT 3.4.2 
 ([dx-compiler@a087726ead v2.5.0: source/docs/Appendix_Change_Log.md#L13]). The board runs RT 3.4.2.
 So: the 2.5.0-only features ConvNeXt needs (7x7 depthwise, LayerNormalization) and the board's runtime are in tension.
 
-## Compile probes with DX-COM 2.4.1 (laptop, synthetic calibration images, **not** for accuracy)
+## Compile results with DX-COM 2.4.1 (laptop, synthetic calibration images, **not** for accuracy)
 
-- A opset 17 and 13: both fail in phase `SURGERY` after ~3 s with `UnknownError: Unknown error occurred during compilation`.
-- Control (toy model: stem conv -> depthwise KxK -> GAP -> Gemm, K = 3, 5, 7): **all three fail identically**, including K=3 which the 2.4.1 table lists as supported.
-- Therefore the failure is NOT evidence about ConvNeXt operators. It points to the toolchain/environment (dependencies resolved to the newest versions: numpy 2.5.4, onnx 1.23.2, onnxruntime 1.31.1, protobuf 7.x, torch 2.15) or the config. Under investigation: a venv resolved as of the release date.
+**Correction of earlier findings (2026-11-05).** The `SURGERY` "Unknown error" was caused by *our config*, not by the models, the ops or the dependency versions:
+- Control: the official DEEPX sample `MobileNetV2-1.onnx` + config (from `sdk.deepx.ai/modelzoo/`, as in `dx-compiler/example/1-download_sample_models.sh`) compiles on 2.4.1 (newest deps venv) and on 2.5.0.
+- Our toy models fail with our first config, but the same toy (3x3 stem + depthwise 3x3) compiles (exit 0) with the official preprocessing block (`convertColor BGR2RGB`, `div 255`, `normalize`, `transpose [2,0,1]`, `expandDim 0`) plus `quantization_device: cpu`. Cause is inside our preprocessing list (no `div`/`convertColor`, `transpose [0,3,1,2]`); exact key not isolated. Our first config was also semantically wrong (no /255, no BGR->RGB for cv2-loaded images).
+- A dependency-pinned venv was therefore unnecessary (hypothesis rejected).
+
+| Model | Opset | 2.4.1 | 2.5.0 | Compiler partition (compiler.log) |
+|---|---|---|---|---|
+| dw7 toy (7x7 depthwise) | 13 | compiles | compiles | - |
+| A | 13 | compiles | compiles | 1 NPU group, 0 CPU groups (2.4.1) |
+| A | 17 | compiles | not run | 1 NPU group, 0 CPU groups |
+| B | 13 | compiles | not run | 1 NPU group, 0 CPU groups |
+| B | 17 | compiles | not run | 1 NPU group, 0 CPU groups |
+
+So the documented 2.4.1 limit (depthwise 3x3/5x5 only) did **not** stop compilation of 18 depthwise 7x7 convs, and `LayerNormalization` (opset 17) was accepted. The tables are conservative or incomplete for 2.4.1; support is verified only by compiling, and numerical quality is not yet checked.
+Compiler guidance: NPU input is uint8 NHWC [1,224,224,3]; div/normalize/transpose are fused into the NPU graph, resize/centercrop/convertColor/expandDim stay host-side.
+
+## Board check (RT 3.4.2, `dxparse`, `dxrun -s -v`), model A opset 13 `.dxnn` compiled by 2.4.1
+- `.dxnn` format **v8**, DX-COM v2.4.1-rc.1, 1 task `npu_0 [NPU]`, no CPU task, 211.8 MB model memory.
+- Loads and runs on RT 3.4.2: single-request NPU time 35.29 ms, latency 39.7-39.9 ms, 24.1-24.3 FPS (`-s` single mode; not comparable with the 65.91 FPS YOLOv5S benchmark-mode number).
+- **No board upgrade is needed** to run ConvNeXt compiled with 2.4.1 (hypothesis H1 resolved for 2.4.1: output is v8, loadable).
+- Accuracy not yet measured: this `.dxnn` was calibrated on synthetic images.
 
 ## Open
-- Whether unsupported ops (7x7 depthwise on 2.4.1) fail or fall back to the CPU is still unobserved.
-- LayerNorm/GELU pattern matching of the exported chains is unverified until a compile succeeds.
+- Real calibration data and accuracy vs FP32 (needs a labelled ImageNet subset).
+- Which preprocessing key triggered the SURGERY failure (low priority).
+- Opset 13 vs 17 numerical/latency comparison; B on the board; Q-Pro.
