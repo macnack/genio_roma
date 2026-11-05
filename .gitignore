@@ -1,2 +1,12 @@
 .envrc.local
 .direnv/
+
+# DX-M1 ConvNeXt workspace
+.venv-*/
+weights/
+models/**/*.onnx
+models/**/*.dxnn
+data/
+__pycache__/
+# nested clone, pinned in third_party/README.md
+third_party/ConvNeXt/

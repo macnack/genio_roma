@@ -1,0 +1,53 @@
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - 
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   COMPILATION CONFIGURATION
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Compiler Version : 2.4.1
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   ONNX Model       : ../A_convnext_tiny_trace_opset17.onnx
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Config File      : config_probe.json
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Output Directory : out
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Optimization Level : 1
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - For faster compilation, consider using opt_level=0 (may increase NPU latency).
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - 
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]
+Loading ONNX model:   0%|          | 0/4 [00:00<?, ?step/s][A
+Loading ONNX model and Validating:   0%|          | 0/4 [00:00<?, ?step/s][A
+Try to change opset and IR version to 21 and 10:  25%|██▌       | 1/4 [00:00<00:00, 10.25step/s][A
+Try to change opset and IR version to 21 and 10:  50%|█████     | 2/4 [00:00<00:00,  2.42step/s][A
+Running shape inference:  50%|█████     | 2/4 [00:00<00:00,  2.42step/s]                        [A
+Running shape inference:  75%|███████▌  | 3/4 [00:01<00:00,  3.08step/s][A
+Converting ONNX to Internal IR:  75%|███████▌  | 3/4 [00:01<00:00,  3.08step/s][A
+                                                                               [ACompiling Model :  10%|█         | 0.1/1.0 [00:01<00:10, 12.04s/model ]
+Running Surgeon:   0%|          | 0/3 [00:00<?, ?step/s][A
+                                                        [A                                                                       [ERROR] - 
+========================================================================================================================
+Phase: PhaseLabels.SURGERY
+Error Type: UnknownError
+Error Message: Unknown error occurred during compilation. Please contact DEEPX.
+========================================================================================================================
+
+Compiling Model :  20%|██        | 0.2/1.0 [00:01<00:09, 12.04s/model ]Command exited with non-zero status 1
+	Command being timed: "../../../.venv-dxcom/bin/dxcom -m ../A_convnext_tiny_trace_opset17.onnx -c config_probe.json -o out --gen_log"
+	User time (seconds): 8.28
+	System time (seconds): 2.43
+	Percent of CPU this job got: 372%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1559836
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 8
+	Minor (reclaiming a frame) page faults: 1250092
+	Voluntary context switches: 516
+	Involuntary context switches: 144324
+	Swaps: 0
+	File system inputs: 328
+	File system outputs: 448
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

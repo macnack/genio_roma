@@ -1,0 +1,77 @@
+{
+  "file": "models/B_dinov3/B_convnext_tiny_trace_opset17.onnx",
+  "opsets": {
+    "ai.onnx": 17
+  },
+  "inputs": {
+    "input": [
+      1,
+      3,
+      224,
+      224
+    ]
+  },
+  "outputs": {
+    "output": [
+      1,
+      768
+    ]
+  },
+  "op_counts": {
+    "Add": 72,
+    "Concat": 3,
+    "Constant": 63,
+    "Conv": 22,
+    "Div": 18,
+    "Erf": 18,
+    "Gather": 1,
+    "GlobalAveragePool": 1,
+    "LayerNormalization": 23,
+    "MatMul": 36,
+    "Mul": 54,
+    "Reshape": 2,
+    "Shape": 2,
+    "Slice": 2,
+    "Transpose": 46
+  },
+  "n_nodes": 363,
+  "dynamic_io": [],
+  "conv_configs": {
+    "standard k=(4, 4) s=(4, 4) p=(0, 0, 0, 0) d=(1, 1) g=1": 1,
+    "depthwise k=(7, 7) s=(1, 1) p=(3, 3, 3, 3) d=(1, 1) g=96": 3,
+    "standard k=(2, 2) s=(2, 2) p=(0, 0, 0, 0) d=(1, 1) g=1": 3,
+    "depthwise k=(7, 7) s=(1, 1) p=(3, 3, 3, 3) d=(1, 1) g=192": 3,
+    "depthwise k=(7, 7) s=(1, 1) p=(3, 3, 3, 3) d=(1, 1) g=384": 9,
+    "depthwise k=(7, 7) s=(1, 1) p=(3, 3, 3, 3) d=(1, 1) g=768": 3
+  },
+  "depthwise_not_3x3_or_5x5": {
+    "count": 18,
+    "examples": [
+      "/m/model/stages.0/layers.0/depthwise_conv/Conv",
+      "/m/model/stages.0/layers.1/depthwise_conv/Conv",
+      "/m/model/stages.0/layers.2/depthwise_conv/Conv"
+    ]
+  },
+  "tables": {
+    "com2.4.1": {
+      "table": "/tmp/claude-1000/-home-maciej-Github-geniu-aeroma/4da46e74-6198-4b93-8bc2-240cdb936f23/scratchpad/repos/dx-compiler-241/source/docs/03_Building_Models.md",
+      "ops_in_table": 46,
+      "model_ops_not_named_in_table": [
+        "LayerNormalization"
+      ]
+    },
+    "com2.5.0": {
+      "table": "/tmp/claude-1000/-home-maciej-Github-geniu-aeroma/4da46e74-6198-4b93-8bc2-240cdb936f23/scratchpad/repos/dx-compiler-dir/dx-compiler/source/docs/03_Building_Models.md",
+      "ops_in_table": 48,
+      "model_ops_not_named_in_table": []
+    }
+  },
+  "forms": {
+    "LayerNormalization_nodes": 23,
+    "ReduceMean": 0,
+    "Erf(gelu chain)": 18,
+    "Gelu_nodes": 0,
+    "Transpose": 46,
+    "Reshape": 2
+  }
+}

@@ -1,0 +1,28 @@
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - 
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   COMPILATION CONFIGURATION
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Compiler Version : 2.4.1
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   ONNX Model       : dw7.onnx
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Config File      : dw7/config_probe.json
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Output Directory : dw7/out
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] -   Optimization Level : 1
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - ================================================================================
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - For faster compilation, consider using opt_level=0 (may increase NPU latency).
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]                                                               [INFO] - 
+Compiling Model :   0%|          | 0.0/1.0 [00:00<?, ?model/s ]
+Loading ONNX model:   0%|          | 0/4 [00:00<?, ?step/s][A
+Loading ONNX model and Validating:   0%|          | 0/4 [00:00<?, ?step/s][A
+Try to change opset and IR version to 21 and 10:  25%|██▌       | 1/4 [00:00<00:00, 169.95step/s][A
+Running shape inference:  50%|█████     | 2/4 [00:00<00:00, 82.93step/s]                         [A
+Converting ONNX to Internal IR:  75%|███████▌  | 3/4 [00:00<00:00, 122.32step/s][A
+                                                                                [ACompiling Model :  10%|█         | 0.1/1.0 [00:00<00:01,  1.90s/model ]
+Running Surgeon:   0%|          | 0/3 [00:00<?, ?step/s][A
+                                                        [A                                                                       [ERROR] - 
+========================================================================================================================
+Phase: PhaseLabels.SURGERY
+Error Type: UnknownError
+Error Message: Unknown error occurred during compilation. Please contact DEEPX.
+========================================================================================================================
+
+Compiling Model :  20%|██        | 0.2/1.0 [00:00<00:01,  1.90s/model ]Failed to compile dw7.onnx. Unknown error occurred during compilation. Please contact DEEPX.
