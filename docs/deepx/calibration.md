@@ -1,0 +1,66 @@
+# DX-COM calibration
+
+Scope: calibration data, JSON config keys, preprocessing, layout. Follows [CONVENTIONS.md](CONVENTIONS.md).
+
+## Officially documented facts
+
+Data
+- By default calibration data must be image files (JPEG, PNG); non-image data needs the `dx_com` Python module with a torch DataLoader. [dx-compiler@a087726ead v2.5.0: source/docs/02_06_Execution_of_DX-COM.md#L14-L18]
+- `calibration_num`: default 100, positive integer; if the dataset has fewer images all are used without warning; manual suggests trying 1, 5, 10, 100, 1000. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L83-L87]
+- A sample 100-image calibration set is fetched by `example/2-download_sample_calibration_dataset.sh` into `dx_com/calibration_dataset/` (harness note). [dx-compiler@a087726ead v2.5.0: .deepx/instructions/compilation-workflow.md#L36-L40]
+- Calibration images should be representative of inference data (harness pitfall note, not manual). [dx-compiler@a087726ead v2.5.0: .deepx/memory/common_pitfalls.md#L55-L74]
+
+JSON keys (as documented)
+| Key | Required | Meaning |
+|---|---|---|
+| `inputs` | Yes | `{"name": [1,C,H,W]}`; batch 1; name must match ONNX |
+| `calibration_method` | No | `"ema"` (default), `"minmax"`, `"iqr"`; lowercase only |
+| `calibration_num` | No | default 100 |
+| `default_loader` | Yes | dataset + preprocessing |
+| `quantization_device` | No | deprecated, ignored in v2.5.0 |
+[dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L9-L19] [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L57-L70]
+- Methods: `ema` (exponential moving average, recommended), `minmax`, `iqr` (25th/75th percentile, robust to outliers). [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L59-L68]
+- `default_loader` example (verbatim):
+  ```json
+  {
+    "default_loader": {
+      "dataset_path": "/datasets/ILSVRC2012",
+      "file_extensions": ["jpeg", "png", "jpg", "JPEG"],
+      "preprocessings": [
+        {"resize": {"width": 224, "height": 224}},
+        {"convertColor": {"form": "BGR2RGB"}},
+        {"div": {"x": 255}},
+        {"normalize": {"mean": [0.485, 0.456, 0.406], "std": [0.229, 0.224, 0.225]}},
+        {"transpose": {"axis": [2, 0, 1]}},
+        {"expandDim": {"axis": 0}}
+      ]
+    }
+  }
+  ```
+  [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L102-L117]
+- `dataset_path` relative paths resolve from the current working directory, not the config file; `file_extensions` required, no dot, case-sensitive; subfolders searched. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L123-L124]
+
+Preprocessing and layout
+- `default_loader` reads with OpenCV as BGR, HWC, uint8 (0-255), applies only the listed `preprocessings` in order, never rescales/converts color/transposes by itself. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L119]
+- NCHW models: end with `transpose [2,0,1]` then `expandDim 0`; without the transpose calibration fails with `DataLoaderError`. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L121] NHWC `[1,H,W,C]` models: only `expandDim 0` (harness schema note). [dx-compiler@a087726ead v2.5.0: .deepx/toolsets/config-schema.md#L127-L135]
+- RGB model trained on [0,1]: `convertColor BGR2RGB` and `div 255` before `normalize`; `normalize` alone does not rescale and compile still succeeds with wrongly scaled data. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L122]
+- Operations: `convertColor` (form values RGB2BGR, BGR2RGB, *2GRAY, *2YCrCb, *2YUV, *2HSV, *2LAB), `resize` (`mode` default/torchvision; `width`/`height` or `size`; `interpolation`), `centercrop`, `transpose`, `expandDim`, `normalize`, `mul`, `add`, `subtract`, `div`. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L487-L563] The Python table also lists `resize2`/`resize3`/`resize_tv`, `centercrop2`, `squeeze`, `slice`, `dtype`, `pil_2_cv`. [dx-compiler@a087726ead v2.5.0: source/docs/02_06_Execution_of_DX-COM.md#L412-L428]
+- Interpolation names are mode-specific uppercase (`default`: LINEAR, NEAREST, CUBIC, AREA, LANCZOS4; `torchvision`: BILINEAR, NEAREST, BICUBIC, LANCZOS); cubic resize appears under NotSupportError. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L507-L512] [dx-compiler@a087726ead v2.5.0: source/docs/02_06_Execution_of_DX-COM.md#L772]
+- Some preprocessing (normalize, div, subtract) may be folded into the NPU graph; check `[INFO] - Added nodes:` in the log and drop those steps from host code; `convertColor` is never folded, so the runtime must apply it. [dx-compiler@a087726ead v2.5.0: source/docs/02_05_JSON_File_Configuration.md#L451-L497]
+- Calibration preprocessing must match deployment preprocessing. [dx-compiler@a087726ead v2.5.0: source/docs/02_06_Execution_of_DX-COM.md#L366-L367]
+- Python DataLoader: batch_size 1; each item shaped as model input without batch dim (e.g. `[3,224,224]`), float32; the verifier requires the batched sample to match the ONNX input exactly; item may be tensor, dict keyed by input name (recommended for multi-input), or list/tuple. [dx-compiler@a087726ead v2.5.0: source/docs/02_06_Execution_of_DX-COM.md#L430-L434]
+- Resume path: calibration settings are embedded in `.qxnn`; `--dataset_path` overrides the dataset; `--recalibration_method` overrides observer. [dx-compiler@a087726ead v2.5.0: source/docs/02_07_Quantization_Tuning_Workflow.md#L91] [dx-compiler@a087726ead v2.5.0: source/docs/02_07_Quantization_Tuning_Workflow.md#L142-L145]
+- dx-modelzoo YAML exposes `compile.calibration.method`, `.num`, `.seed`, `.use_q_pro` (modelzoo layer, not DX-COM JSON keys). [dx-modelzoo@ab3e3a4234 v1.0.0: docs/source/02_03_YAML_Configuration.md#L320-L325]
+- Q-Master reuses `default_loader` as the single preprocessing source; use training-like images, not the evaluation set. [dx-compiler@a087726ead v2.5.0: source/docs/02_08_Quantization_Aware_Training.md#L39] [dx-compiler@a087726ead v2.5.0: source/docs/02_08_Quantization_Aware_Training.md#L77-L81]
+
+## Experimentally verified facts
+
+None yet (no DX-M1 available on host as of 2026-11-05).
+
+## Hypotheses needing validation
+
+- ConvNeXt-Tiny preprocessing: torchvision/timm ImageNet recipe (resize 256 shortest side -> centercrop 224, RGB, /255, mean/std ImageNet) is inferred from the general QAT example, which uses `resize {"mode":"default","size":256}` + `centercrop`. [dx-compiler@a087726ead v2.5.0: source/docs/02_08_Quantization_Aware_Training.md#L59-L66] That our checkpoint uses these exact values is an assumption; verify against the model's training config. Also check that `resize` with `size` replicates the shortest-side semantics used in training (settle by comparing tensors against torchvision on one image).
+- Whether `default_loader` (OpenCV resize, BGR->RGB) numerically matches the PIL-based training pipeline; the docs offer `mode: torchvision` (PIL) for resize. Compare FP32 ONNX accuracy under both.
+- Minimum useful calibration size for ConvNeXt (docs only say default 100, try 1..1000); sweep and compare accuracy.
+- Whether normalize/div get folded into the NPU graph for our model (check `Added nodes` log) which dictates the host-side runtime preprocessing; also the runtime input dtype (uint8 vs float32) is a DX-RT matter, not answered here.
+- Calibration data for the dx-modelzoo `preprocessing` config: dx-modelzoo YAML preprocessing was not read in detail.
