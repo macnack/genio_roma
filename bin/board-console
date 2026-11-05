@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Serial console to the board (default /dev/ttyUSB0 @ 921600). Exit tio: Ctrl-t q
+tty="${1:-${BOARD_TTY:-/dev/genio-board}}"; [ -e "$tty" ] || tty=/dev/ttyUSB0
+exec tio "$tty" -b "${BOARD_BAUD:-921600}"

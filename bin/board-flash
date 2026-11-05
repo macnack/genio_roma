@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Usage: board-flash <path-to-unpacked-image-dir>   (runs genio-flash there; keep board in download mode if needed)
+dir="${1:?usage: board-flash <image-dir>}"
+cd "$dir" && exec genio-flash

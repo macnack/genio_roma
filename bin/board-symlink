@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Creates stable /dev/genio-board -> ttyUSBx for the board's FTDI UART (serial BK014LEL). Needs sudo.
+# Different adapter? Pass its serial: board-symlink <FTDI_SERIAL>  (see: udevadm info -a /dev/ttyUSB0 | grep serial)
+set -euo pipefail
+serial="${1:-BK014LEL}"
+printf 'SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="%s", SYMLINK+="genio-board", MODE="0660", GROUP="dialout"\n' "$serial" \
+  | sudo tee /etc/udev/rules.d/73-genio-board.rules >/dev/null
+sudo udevadm control --reload-rules
+sudo udevadm trigger --subsystem-match=tty
+sleep 1; ls -l /dev/genio-board

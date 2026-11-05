@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# One-time host setup (needs sudo). Mirrors grinn-genio-700-sbc-docs/ubuntu/host-setup.md
+set -euo pipefail
+sudo apt update
+sudo apt install -y tio android-tools-adb android-tools-fastboot pipx
+pipx ensurepath
+pipx install genio-tools || pipx upgrade genio-tools
+
+printf '%s\n' \
+ 'SUBSYSTEM=="usb", ATTR{idVendor}=="0e8d", ATTR{idProduct}=="201c", MODE="0660", TAG+="uaccess"' \
+ 'SUBSYSTEM=="usb", ATTR{idVendor}=="0e8d", ATTR{idProduct}=="0003", MODE="0660", TAG+="uaccess"' \
+ 'SUBSYSTEM=="usb", ATTR{idVendor}=="0403", MODE="0660", TAG+="uaccess"' \
+ 'SUBSYSTEM=="gpio", MODE="0660", TAG+="uaccess"' \
+ | sudo tee /etc/udev/rules.d/72-aiot.rules >/dev/null
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+id -nG | grep -qw dialout || { sudo usermod -a -G dialout "$USER"; echo "Log out/in for dialout to apply."; }
+"$(dirname "$0")/board-symlink"
+echo "Done. Run: board-check"

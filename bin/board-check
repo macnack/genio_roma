@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Quick status: tools, serial device, USB, genio-config
+ok(){ printf '  [ok]   %s\n' "$1"; }; no(){ printf '  [MISS] %s\n' "$1"; }
+for c in tio adb fastboot pipx genio-config genio-flash; do command -v "$c" >/dev/null && ok "$c" || no "$c"; done
+tty="${BOARD_TTY:-/dev/genio-board}"; [ -e "$tty" ] || tty=/dev/ttyUSB0
+[ -e "$tty" ] && { [ -r "$tty" ] && [ -w "$tty" ] && ok "$tty (rw)" || no "$tty exists but no rw access (dialout?)"; } || no "$tty not present"
+echo "USB:"; lsusb 2>/dev/null | grep -Ei '0e8d|0403' || echo "  none of 0e8d/0403 seen"
+command -v adb >/dev/null && { echo "adb:"; adb devices | sed 1d | sed 's/^/  /'; }
+command -v genio-config >/dev/null && { echo "genio-config:"; genio-config 2>&1 | sed 's/^/  /'; }
