@@ -1,0 +1,13 @@
+{
+ "model": "m.dxnn",
+ "n": 4000,
+ "out_shape": [
+  4000,
+  768
+ ],
+ "wall_s": 273.76889848709106,
+ "wall_ms_per_img": 68.44222462177277,
+ "latency_us_mean": 66112.70825,
+ "latency_us_p95": 69142.05,
+ "npu_us_mean": 60694.20375
+}

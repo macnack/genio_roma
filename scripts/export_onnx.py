@@ -17,9 +17,13 @@ import numpy as np
 import torch
 
 ROOT = Path(__file__).resolve().parents[1]
-HF_B = (Path.home() / ".cache/huggingface/hub/models--facebook--dinov3-convnext-tiny-pretrain-lvd1689m"
-        / "snapshots/10d30274b4d445111e2d5bf75ac93bbd94db274b")
-OUT_DIR = {"A": ROOT / "models/A_fb_in1k", "B": ROOT / "models/B_dinov3"}
+HF_HUB = Path.home() / ".cache/huggingface/hub"
+HF_B = HF_HUB / "models--facebook--dinov3-convnext-tiny-pretrain-lvd1689m/snapshots/10d30274b4d445111e2d5bf75ac93bbd94db274b"
+# Small: single cached snapshot (resolved at call time)
+HF_BS = HF_HUB / "models--facebook--dinov3-convnext-small-pretrain-lvd1689m/snapshots"
+OUT_DIR = {"A": ROOT / "models/A_fb_in1k", "B": ROOT / "models/B_dinov3",
+           "AS": ROOT / "models/AS_fb_in1k_small", "BS": ROOT / "models/BS_dinov3_small"}
+ARCH = {"A": "convnext_tiny", "AS": "convnext_small", "B": "convnext_tiny", "BS": "convnext_small"}
 
 
 def sha256(p: Path) -> str:
@@ -30,7 +34,7 @@ def sha256(p: Path) -> str:
     return h.hexdigest()
 
 
-def load_A():
+def load_A(arch="convnext_tiny", ckpt_name="convnext_tiny_1k_224_ema.pth"):
     # third_party/ConvNeXt/models/convnext.py imports timm.models.registry (removed in recent
     # timm). Shim ONLY that import; model code itself is used unmodified.
     import timm.models
@@ -40,12 +44,12 @@ def load_A():
         sys.modules["timm.models.registry"] = reg
         timm.models.registry = reg
     sys.path.insert(0, str(ROOT / "third_party/ConvNeXt"))
-    from models.convnext import convnext_tiny  # noqa: E402
+    import models.convnext as _cn  # noqa: E402
 
-    ckpt_path = ROOT / "weights/convnext_tiny_1k_224_ema.pth"
+    ckpt_path = ROOT / "weights" / ckpt_name
     ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=True)
     sd = ckpt["model"] if "model" in ckpt else ckpt
-    model = convnext_tiny(pretrained=False)  # num_classes=1000
+    model = getattr(_cn, arch)(pretrained=False)  # num_classes=1000
     missing, unexpected = model.load_state_dict(sd, strict=True), None
     return model.eval(), torch.zeros(1, 3, 224, 224), {"weights": str(ckpt_path), "weights_sha256": sha256(ckpt_path)}
 
@@ -59,15 +63,19 @@ class _PooledWrapper(torch.nn.Module):
         return self.m(pixel_values=x).pooler_output
 
 
-def load_B():
+def load_B(snap=None):
     from transformers import AutoModel
-    m = AutoModel.from_pretrained(str(HF_B), local_files_only=True, torch_dtype=torch.float32).eval()
-    st = HF_B / "model.safetensors"
+    snap = snap or HF_B
+    m = AutoModel.from_pretrained(str(snap), local_files_only=True, torch_dtype=torch.float32).eval()
+    st = snap / "model.safetensors"
     return _PooledWrapper(m).eval(), torch.zeros(1, 3, 224, 224), {
         "weights": str(st.resolve()), "weights_sha256": sha256(st.resolve()), "hf_class": type(m).__name__}
 
 
-LOADERS = {"A": load_A, "B": load_B}
+LOADERS = {"A": load_A,
+           "AS": lambda: load_A("convnext_small", "convnext_small_1k_224_ema.pth"),
+           "B": load_B,
+           "BS": lambda: load_B(sorted(HF_BS.iterdir())[0])}
 
 
 def main():
@@ -84,7 +92,7 @@ def main():
     out_dir = OUT_DIR[a.model]
     out_dir.mkdir(parents=True, exist_ok=True)
     tag = f"{'dynamo' if a.dynamo else 'trace'}_opset{a.opset}"
-    path = out_dir / f"{a.model}_convnext_tiny_{tag}.onnx"
+    path = out_dir / f"{a.model}_{ARCH[a.model]}_{tag}.onnx"
 
     with torch.no_grad():
         ref = model(x).numpy()

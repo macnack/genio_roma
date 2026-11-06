@@ -1,0 +1,10 @@
+{
+ "onnx": "models/A_fb_in1k/A_convnext_tiny_trace_opset13.onnx",
+ "n": 4000,
+ "out_shape": [
+  4000,
+  1000
+ ],
+ "top1": 0.81925,
+ "top5": 0.95925
+}

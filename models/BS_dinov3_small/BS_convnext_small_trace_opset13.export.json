@@ -1,0 +1,27 @@
+{
+  "model": "BS",
+  "onnx": "models/BS_dinov3_small/BS_convnext_small_trace_opset13.onnx",
+  "onnx_sha256": "da73f103985cc9a10fe2e43a4eafae5ea536d5d1c8b5a489e583bc3a993879a6",
+  "opset": 13,
+  "exporter": "trace",
+  "torch": "2.15.0+cpu",
+  "onnx_pkg": "1.23.2",
+  "onnxruntime": "1.31.1",
+  "input": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "output_shape": [
+    1,
+    768
+  ],
+  "max_abs_diff": 3.5762786865234375e-06,
+  "mean_abs_diff": 8.566348697058856e-07,
+  "cosine": 1.0,
+  "seed": 0,
+  "weights": "/home/maciej/.cache/huggingface/hub/models--facebook--dinov3-convnext-small-pretrain-lvd1689m/blobs/8182492b73345ceb449ed6be0de486d778a73afb273ba2684de785a71ef1da9d",
+  "weights_sha256": "8182492b73345ceb449ed6be0de486d778a73afb273ba2684de785a71ef1da9d",
+  "hf_class": "DINOv3ConvNextModel"
+}

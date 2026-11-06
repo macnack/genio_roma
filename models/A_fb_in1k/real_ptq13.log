@@ -1,0 +1,6 @@
+compile_seconds=108
+Final result: 1 NPU groups, 0 CPU groups
+
+real	1m47.950s
+user	2m55.611s
+sys	0m4.682s

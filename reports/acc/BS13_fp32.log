@@ -1,0 +1,1 @@
+{'onnx': 'models/BS_dinov3_small/BS_convnext_small_trace_opset13.onnx', 'n': 4000, 'out_shape': [4000, 768]}

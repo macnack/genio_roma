@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/maciej/Github/geniu_aeroma/scripts/compare_acc.py", line 9, in <module>
+    r, d = np.load(a.ref).astype(np.float64), np.load(a.dev).astype(np.float64)
+                                              ^^^^^^^^^^^^^^
+  File "/home/maciej/Github/geniu_aeroma/.venv-export/lib/python3.12/site-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'reports/acc/BS13_ptq_out.npy'
+adb: no devices/emulators found

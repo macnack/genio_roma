@@ -1,0 +1,32 @@
+2026-11-06 06:40:06,131 - INFO - 
+2026-11-06 06:40:06,131 - INFO - ================================================================================
+2026-11-06 06:40:06,131 - INFO -   COMPILATION CONFIGURATION
+2026-11-06 06:40:06,131 - INFO - ================================================================================
+2026-11-06 06:40:06,131 - INFO -   Compiler Version : 2.4.1
+2026-11-06 06:40:06,131 - INFO -   ONNX Model       : models/A_fb_in1k/A_convnext_tiny_trace_opset13.onnx
+2026-11-06 06:40:06,132 - INFO -   Config File      : models/A_fb_in1k/real_minmax13/config.json
+2026-11-06 06:40:06,132 - INFO -   Output Directory : models/A_fb_in1k/real_minmax13
+2026-11-06 06:40:06,132 - INFO -   Optimization Level : 1
+2026-11-06 06:40:06,132 - INFO - ================================================================================
+2026-11-06 06:40:06,132 - INFO - For faster compilation, consider using opt_level=0 (may increase NPU latency).
+2026-11-06 06:40:06,132 - INFO - 
+2026-11-06 06:40:08,268 - INFO - Final result: 1 NPU groups, 0 CPU groups
+2026-11-06 06:40:08,456 - INFO - [Quantization] wbit=8, abit=8, mode=ptq
+2026-11-06 06:40:16,628 - INFO - Inserting preprocessing operations to NPU graph: 3 nodes added
+2026-11-06 06:40:16,629 - INFO - Added nodes: Div(x=255) -> Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+2026-11-06 06:40:16,629 - INFO - Skipped nodes (cannot be inserted in NPU graph): resize, centercrop, convertColor, expandDim
+2026-11-06 06:40:16,716 - INFO - 
+2026-11-06 06:40:16,716 - INFO - ================================================================================
+2026-11-06 06:40:16,716 - INFO -   INPUT PREPROCESSING GUIDANCE
+2026-11-06 06:40:16,716 - INFO - ================================================================================
+2026-11-06 06:40:16,716 - INFO -   [input] Format: FORMATTER | Fused ops: Transpose(HWC→CHW) → Div(x=255) → Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+2026-11-06 06:40:16,716 - INFO -            ONNX input : float32 NCHW [1, 3, 224, 224]
+2026-11-06 06:40:16,716 - INFO -            NPU  input : uint8 NHWC [1, 224, 224, 3]
+2026-11-06 06:40:16,716 - INFO - 
+2026-11-06 06:40:16,716 - INFO -   For NPU inference, provide uint8 HWC input directly.
+2026-11-06 06:40:16,716 - INFO -   You should SKIP these preprocessing in NPU inference. (already handled by NPU):
+2026-11-06 06:40:16,716 - INFO -     • div/mul   : pixel value scaling            (fused as Mul node)
+2026-11-06 06:40:16,716 - INFO -     • normalize : channel-wise normalization     (fused as Add+Mul nodes)
+2026-11-06 06:40:16,717 - INFO -     • transpose : HWC → CHW layout conversion   (handled by NPU input format)
+2026-11-06 06:40:16,717 - INFO - ================================================================================
+2026-11-06 06:40:16,717 - INFO - 
