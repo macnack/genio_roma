@@ -25,3 +25,19 @@ Top-1 95% interval is about +-1.2 points at n=4000; differences below that are n
 - Q-Pro did not improve Top-1 over PTQ here (difference inside the interval), but improved logit cosine/KL; cost 87x compile time.
 - B-tiny feature fidelity is poor under PTQ (cosine 0.73) while B-small is good (0.98); cause not investigated.
 - Latency/NPU time is identical for tiny across quantisation modes; model-only, preprocessing excluded. Single-request mode only; no benchmark-mode throughput yet.
+
+## Throughput (board, `dxrun -b -t 10 -w 5`, model-only, PTQ EMA .dxnn; raw: `reports/acc/sweep_dxrun.csv`, `scripts/sweep_dxrun.sh`)
+One 10 s run per point (no repeats), so differences of ~1 FPS are not meaningful. `-n` = NPU binding (0 all, 1/2/3 single core, 4/5/6 two cores).
+
+| Setting | A-tiny FPS | A-small FPS |
+|---|---|---|
+| single request (`-s`, sync) | ~24.2 | ~14-15 (1/65.3 ms) |
+| all 3 cores (`-n 0`), buffers 6 (default) | 58.9 | 34.4 |
+| 1 core (`-n 1/2/3`) | 28.3 | 16.5 |
+| 2 cores (`-n 4/5/6`) | 47.9-48.4 | 27.5-28.3 |
+| buffer-count 1 / 2 / 3 / 6 / 12 / 24 (all cores) | 24.4 / 39.8 / 53.4 / 58.9 / 58.9 / 58.9 | 15.0 / 24.8 / 32.6 / 34.4 / 34.5 / 34.5 |
+
+- Scaling vs 1 core: 2 cores x1.7, 3 cores x2.1 (tiny); the cores are not perfectly parallel (shared memory/PCIe Gen2 x1 are untested hypotheses).
+- Throughput saturates at 6 buffers (default); 3 buffers reach ~91% of it. Buffer-count 1 equals single-request speed.
+- Single-core 28.3 FPS = 35.3 ms NPU time per frame is consistent with `dxrun -s` NPU time (35.28 ms); latency in single mode includes ~4.8 ms transfer/overhead.
+- Not measured: NPU temperature/clock under load, CPU utilisation, power, end-to-end with image decoding.
