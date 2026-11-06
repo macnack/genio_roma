@@ -61,7 +61,9 @@ ConvNeXt-relevant ops: documented status
 
 ## Experimentally verified facts
 
-None yet (no DX-M1 available on host as of 2026-11-05).
+- Both opset 13 (primitive LayerNorm chain) and opset 17 (`LayerNormalization`) ConvNeXt-Tiny exports compile on DX-COM 2.4.1; the GELU `Erf` chain, 36 MatMul, Transpose chains, layer-scale Mul and 18 depthwise 7x7 convs are all accepted and end up on the NPU. (`reports/ops.md`)
+- Accuracy after INT8 PTQ (EMA, 100 calib images, 4000 ImageNet-val images): A-tiny 81.9% -> 80.8% Top-1, A-small 83.1% -> 82.0%. (`reports/accuracy.md`)
+- B-tiny (DINOv3) PTQ feature fidelity is poor (cosine 0.734 vs FP32) while B-small is good (0.984); cause unknown. (`reports/acc/B13_ptq_compare.json`, `reports/acc/BS13_ptq_compare.json`)
 
 ## Hypotheses needing validation
 

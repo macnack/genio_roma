@@ -23,6 +23,10 @@ Run 2026-11-05 via `adb shell` (read-only commands only; nothing installed or ch
 | Extra | `/home/ubuntu/dx-runtime` (a dx-runtime checkout with `venv-dx-runtime`) exists | `ls` |
 
 Board-side config changed earlier by the user (passwordless sudo, serial autologin): see `bin/README.md`.
+- Settled 2026-11-06 (former H1): DX-COM 2.4.1 output is `.dxnn` v8 and loads/runs on RT 3.4.2; 2.5.0 emits v9 (documented), not tested on the board. (`reports/ops.md`, "Board check")
+- Settled 2026-11-06 (former H2): `dx_engine` 3.4.2 installs from the shipped cp312 wheel into a user-space venv (`/home/ubuntu/dxenv`); system packages untouched. `InferenceEngine(model).run([uint8 HWC])` works. (`scripts/eval_dx_board.py`)
+- Settled 2026-11-06 (former H3, partly): the `dxrun` flags we used on RT 3.4.2 exist and work: `-m -b -s -v -n -l -t -w -d -f --use-ort --profiler --buffer-count`. Flags we did not use are unchecked. (`scripts/sweep_dxrun.sh`)
+- Settled 2026-11-06 (former H4): RAM/disk are tight but workable: a 602 MB eval array, 200 MB models and ORT in a user venv fit; free disk fell from 3.6 GB to 1.2-2.4 GB after our files. (`reports/cross_device.md`)
 
 ## Consistency with documented release sets
 
@@ -30,7 +34,3 @@ Board versions (FW 2.7.4, driver 2.6.0, PCIe 2.5.0, RT 3.4.2) match the suite re
 
 ## Hypotheses needing validation
 
-- H1. Models must come from a DX-COM matching RT 3.4.2 (≤ 2.4.x per the matrix); `.dxnn` produced by DX-COM 2.5.0 may be a newer format than RT 3.4.2 loads. Settle: `dxparse`/`dxrun` on a candidate file.
-- H2. `/usr/share/libdxrt-bin/python/*cp312*.whl` provides `dx_engine` for the system Python; installing it in a venv should not touch system packages. Not yet tried.
-- H3. Behaviour/flags in these docs (written against RT 3.5.0 sources) may differ on RT 3.4.2; check `dxrun --help` on the board before relying on a flag.
-- H4. Board RAM (3.7 GB) and free disk (3.6 GB) may limit ONNX Runtime/numpy tooling and larger models.

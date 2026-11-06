@@ -7,7 +7,7 @@ These docs consolidate DEEPX DX-M1 knowledge for this project. Rules:
 Each doc has three sections, in this order, using these exact headings:
 
 1. `## Officially documented facts` — stated in official DEEPX source. Every bullet ends with a citation.
-2. `## Experimentally verified facts` — observed by us on real hardware/tools in this project. Each bullet cites a log/script path under `/home/maciej/Github/geniu_aeroma`. **Until Phases 3-6 run, this section reads: `None yet (no DX-M1 available on host as of 2026-11-05).`**
+2. `## Experimentally verified facts` — observed by us on real hardware/tools in this project. Each bullet cites a log/script path under `/home/maciej/Github/geniu_aeroma`. Phases 3-7 have run on the Genio-700 board (2026-11-06); files not yet re-checked against hardware still read `None yet (no DX-M1 available on host as of 2026-11-05).`
 3. `## Hypotheses needing validation` — inferences, gaps, or things the sources leave ambiguous. Each says what experiment would settle it.
 
 ## Citation format

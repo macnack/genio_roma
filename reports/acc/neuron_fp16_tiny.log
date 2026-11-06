@@ -1,0 +1,276 @@
+2026-10-31 14:14:46.689893160 [I:onnxruntime:, inference_session.cc:583 TraceSessionOptions] Session Options {  execution_mode:0 execution_order:DEFAULT enable_profiling:0 optimized_model_filepath:"" enable_mem_pattern:1 enable_mem_reuse:1 enable_cpu_mem_arena:1 profile_file_prefix:onnxruntime_profile_ session_logid: session_log_severity_level:0 session_log_verbosity_level:0 max_num_graph_transformation_steps:10 graph_optimization_level:3 intra_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } inter_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } use_per_session_threads:1 thread_pool_allow_spinning:1 use_deterministic_compute:0 config_options: {  } }
+2026-10-31 14:14:46.689994390 [I:onnxruntime:, inference_session.cc:483 operator()] Flush-to-zero and denormal-as-zero are off
+2026-10-31 14:14:46.690005467 [I:onnxruntime:, inference_session.cc:491 ConstructorCommon] Creating and using per session threadpools since use_per_session_threads_ is true
+2026-10-31 14:14:46.690012929 [I:onnxruntime:, inference_session.cc:509 ConstructorCommon] Dynamic block base set to 0
+INFO: Android SDK version: 31
+INFO: NeuronApi error: unable to open library libneuron_adapter.so, dllerror: 
+INFO: NeuronApi error: unable to open library libneuron_adapter.mtk.so, dllerror: 
+INFO: dlopen libneuronusdk_adapter.mtk.so
+INFO: Num devices: 2
+INFO: Got device name: mtk-dsp
+INFO: Got device name: mtk-mdla
+INFO: NeuronApi version: 8.2.16
+2026-10-31 14:14:46.759917621 [I:onnxruntime:, inference_session.cc:1669 Initialize] Initializing session.
+2026-10-31 14:14:46.762359544 [I:onnxruntime:, graph_partitioner.cc:898 InlineFunctionsAOT] This model does not have any local functions defined. AOT Inlining is not performed
+2026-10-31 14:14:46.762693160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:46.763200852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level1_RuleBasedTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.763352160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DoubleQDQPairsRemover modified: 0 with status: OK
+2026-10-31 14:14:46.764088929 [I:onnxruntime:, constant_sharing.cc:248 ApplyImpl] Total shared scalar initializer count: 95
+2026-10-31 14:14:46.764109852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantSharing modified: 1 with status: OK
+2026-10-31 14:14:46.768512775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CommonSubexpressionElimination modified: 0 with status: OK
+2026-10-31 14:14:46.768781083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantFolding modified: 0 with status: OK
+2026-10-31 14:14:46.768952160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-10-31 14:14:46.769108621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ReshapeFusion modified: 0 with status: OK
+2026-10-31 14:14:46.769118775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FreeDimensionOverrideTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.769124621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:46.769129621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:46.769311313 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQPropagationTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.769461083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:46.769589467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RocmBlasAltImpl modified: 0 with status: OK
+2026-10-31 14:14:46.771663621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer TransposeOptimizer modified: 1 with status: OK
+2026-10-31 14:14:46.775159237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_33_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775189929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_25_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775196929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_23_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775202698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_22_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775207313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_21_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775211313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_20_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775215237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_24_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775219313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_13_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775223160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_12_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775226775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_10_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775231160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_9_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775234852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_6_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775239237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_3_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775242852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_1_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775246698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_7_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775252006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_34_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775257390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_27_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775267698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775274621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_15_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775278775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_17_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775285467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_26_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775291467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_11_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775296390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_5_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775320852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_29_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775327006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_18_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775332467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_2_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775337390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_0_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775342237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_14_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775349544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_19_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775355775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_8_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775361544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_31_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775366929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_4_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775372237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_28_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775376160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_32_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775379852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_16_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775384083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_30_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.775795698 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level1_RuleBasedTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.775954006 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DoubleQDQPairsRemover modified: 0 with status: OK
+2026-10-31 14:14:46.776624390 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CommonSubexpressionElimination modified: 0 with status: OK
+2026-10-31 14:14:46.776864544 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantFolding modified: 0 with status: OK
+2026-10-31 14:14:46.777030852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-10-31 14:14:46.777185467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ReshapeFusion modified: 0 with status: OK
+2026-10-31 14:14:46.777196006 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FreeDimensionOverrideTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.777202390 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:46.777207929 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:46.777391544 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQPropagationTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.777547852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:46.777682621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RocmBlasAltImpl modified: 0 with status: OK
+2026-10-31 14:14:46.786381390 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level2_RuleBasedTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.787519160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer TransposeOptimizer_CPUExecutionProvider modified: 0 with status: OK
+2026-10-31 14:14:46.787721852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQSelectorActionTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.787879237 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GemmActivationFusion modified: 0 with status: OK
+2026-10-31 14:14:46.788037775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulIntegerToFloatFusion modified: 0 with status: OK
+2026-10-31 14:14:46.788176775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DynamicQuantizeMatMulFusion modified: 0 with status: OK
+2026-10-31 14:14:46.788332083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvActivationFusion modified: 0 with status: OK
+2026-10-31 14:14:46.788483929 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL2 modified: 0 with status: OK
+2026-10-31 14:14:46.788632775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL2 modified: 0 with status: OK
+2026-10-31 14:14:46.788781083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SimplifiedLayerNormFusion modified: 0 with status: OK
+2026-10-31 14:14:46.788922160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer AttentionFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789064160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EmbedLayerNormFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789338160 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherSliceToSplitFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789486621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GatherToSliceFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789631852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatmulTransposeFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789777467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasGeluFusion modified: 0 with status: OK
+2026-10-31 14:14:46.789935467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer SkipLayerNormFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790110467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FastGeluFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790262775 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QuickGeluFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790437313 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasSoftmaxFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790590083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer BiasDropoutFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790744852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulScaleFusion modified: 0 with status: OK
+2026-10-31 14:14:46.790890621 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulActivationFusion modified: 0 with status: OK
+2026-10-31 14:14:46.791038083 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulNBitsFusion modified: 0 with status: OK
+2026-10-31 14:14:46.791196467 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQFinalCleanupTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.796541544 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NhwcTransformer modified: 1 with status: OK
+2026-10-31 14:14:46.800197083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_241_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800243544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_238_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800249929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_235_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800276929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_230_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800282160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_228_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800286160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_226_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800289929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_225_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800293698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_223_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800298006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_222_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800302160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_221_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800305852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_219_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800309544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_216_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800313313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_212_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800317083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_211_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800321006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_209_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800324775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_207_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800329160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_206_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800333313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_204_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800337237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_201_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800341160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_197_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800344852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_194_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800348467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_189_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800352160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_236_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800355775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_187_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800359621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_186_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800363544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_182_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800373083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_177_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800377698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_174_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800381698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_171_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800385544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_168_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800389467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_160_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800393160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_157_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800397006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_229_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800401237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_155_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800405237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_152_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800409083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_151_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800412929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_150_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800416852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_149_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800420698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_146_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800425083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_145_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800428929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_144_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800433006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_134_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800437006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_133_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800440775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_125_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800444544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_124_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800448544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_121_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800452544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_117_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800456160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.2/dwconv/Conv_token_118_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800460083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.1/dwconv/Conv_token_115'. It is no longer used by any node.
+2026-10-31 14:14:46.800467775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_113_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800472544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.0/dwconv/Conv_token_110_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800477237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_109_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800481313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.3/downsample_layers.3.1/Conv_token_107_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800486237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_106_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800490160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.8/dwconv/Conv_token_104'. It is no longer used by any node.
+2026-10-31 14:14:46.800493775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.8/dwconv/Conv_token_103_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800497929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_102_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800502237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.7/dwconv/Conv_token_99_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800506390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.6/dwconv/Conv_token_96'. It is no longer used by any node.
+2026-10-31 14:14:46.800510313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.5/dwconv/Conv_token_92'. It is no longer used by any node.
+2026-10-31 14:14:46.800513852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.5/dwconv/Conv_token_91_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800517544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.4/dwconv/Conv_token_87_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800521083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_86_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800524929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.2/dwconv/Conv_token_80'. It is no longer used by any node.
+2026-10-31 14:14:46.800529160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.2/dwconv/Conv_token_79_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800533006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_78_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800537160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.1/dwconv/Conv_token_75_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800541237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.0/dwconv/Conv_token_72'. It is no longer used by any node.
+2026-10-31 14:14:46.800544929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.0/dwconv/Conv_token_71_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800548698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.2/downsample_layers.2.1/Conv_token_69'. It is no longer used by any node.
+2026-10-31 14:14:46.800556083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.2/downsample_layers.2.1/Conv_token_68_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800560852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_98_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800564775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_67_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800568544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_63_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800572083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.1/dwconv/Conv_token_61'. It is no longer used by any node.
+2026-10-31 14:14:46.800575698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_163_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800579698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_59_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800583313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.0/dwconv/Conv_token_57'. It is no longer used by any node.
+2026-10-31 14:14:46.800587390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.0/dwconv/Conv_token_56_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800591621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_55_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800595313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_224_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800599237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.2/dwconv/Conv_token_50'. It is no longer used by any node.
+2026-10-31 14:14:46.800603237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.2/dwconv/Conv_token_49_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800606929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.1/dwconv/Conv_token_45_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800611237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.0/dwconv/Conv_token_42'. It is no longer used by any node.
+2026-10-31 14:14:46.800615006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.0/dwconv/Conv_token_41_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800619006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_40_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800623390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.3/dwconv/Conv_token_84'. It is no longer used by any node.
+2026-10-31 14:14:46.800627083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_165_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800631467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.1/dwconv/Conv_token_114_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800635313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_44_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800639621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.3/downsample_layers.3.1/Conv_token_108'. It is no longer used by any node.
+2026-10-31 14:14:46.800651006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_202_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800656698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_196_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800660775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.1/dwconv/Conv_token_60_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800666467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.0/stages.0.1/dwconv/Conv_token_46'. It is no longer used by any node.
+2026-10-31 14:14:46.800670160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_245_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800674852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_217_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800678698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_181_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800683313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.0/dwconv/Conv_token_111'. It is no longer used by any node.
+2026-10-31 14:14:46.800688544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_227_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800692313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_191_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800697390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_128_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800702006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_139_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800705929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_175_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800709929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_214_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800713621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_123_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800717390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_122_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800720929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.1/downsample_layers.1.1/Conv_token_54'. It is no longer used by any node.
+2026-10-31 14:14:46.800725698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_136_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800729544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.4/dwconv/Conv_token_88'. It is no longer used by any node.
+2026-10-31 14:14:46.800733467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.3/stages.3.2/dwconv/Conv_token_119'. It is no longer used by any node.
+2026-10-31 14:14:46.800737237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_138_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800743467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_126_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800750083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.1/downsample_layers.1.1/Conv_token_53_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800758698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_231_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800763544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_120_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800767775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_94_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800771544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_129_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800779237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.7/dwconv/Conv_token_100'. It is no longer used by any node.
+2026-10-31 14:14:46.800783929 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_36_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800788621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.0/downsample_layers.0.0/Conv_token_38'. It is no longer used by any node.
+2026-10-31 14:14:46.800792621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_143_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800797467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.2/dwconv/Conv_token_64_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800801544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_176_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800805467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_169_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800809237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_90_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800813160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_74_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800817160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.1/stages.1.2/dwconv/Conv_token_65'. It is no longer used by any node.
+2026-10-31 14:14:46.800821006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_141_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800825698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_192_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800830390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_167_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800835006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_162_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800840083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_240_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800844313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_52_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800848006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_131_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800851775 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_82_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800861237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_199_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800866467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_184_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800871083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.6/dwconv/Conv_token_95_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800894544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_158_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800900698 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_127_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800904313 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_147_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800908467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/downsample_layers.0/downsample_layers.0.0/Conv_token_37_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800912390 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_48_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800918083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_173_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800922621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.3/dwconv/Conv_token_83_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800928467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_233_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800933544 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_170_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800937852 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_70_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800942467 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_243_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800946160 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_153_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800950083 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_172_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800958237 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_148_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.800964006 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg '/stages.2/stages.2.1/dwconv/Conv_token_76'. It is no longer used by any node.
+2026-10-31 14:14:46.800967621 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_179_out0'. It is no longer used by any node.
+2026-10-31 14:14:46.801225929 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvAddActivationFusion modified: 0 with status: OK
+2026-10-31 14:14:46.801541698 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer NhwcTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.801704237 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConvAddActivationFusion modified: 0 with status: OK
+2026-10-31 14:14:46.828542390 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RemoveDuplicateCastTransformer modified: 1 with status: OK
+2026-10-31 14:14:46.836291698 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CastFloat16Transformer modified: 1 with status: OK
+2026-10-31 14:14:46.860054852 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MemcpyTransformer modified: 0 with status: OK
+2026-10-31 14:14:46.860485698 [V:onnxruntime:, session_state.cc:1148 VerifyEachNodeIsAssignedToAnEp] Node placements
+2026-10-31 14:14:46.860502083 [V:onnxruntime:, session_state.cc:1151 VerifyEachNodeIsAssignedToAnEp]  All nodes placed on [CPUExecutionProvider]. Number of nodes: 615
+2026-10-31 14:14:46.863328621 [V:onnxruntime:, session_state.cc:128 CreateGraphInfo] SaveMLValueNameIndexMapping
+2026-10-31 14:14:46.863835313 [V:onnxruntime:, session_state.cc:174 CreateGraphInfo] Done saving OrtValue mappings.
+2026-10-31 14:14:46.863854160 [I:onnxruntime:, allocation_planner.cc:2567 CreateGraphPartitioner] Use DeviceBasedPartition as default
+2026-10-31 14:14:46.874840775 [I:onnxruntime:, session_state_utils.cc:276 SaveInitializedTensors] Saving initialized tensors.
+2026-10-31 14:14:46.905817621 [I:onnxruntime:, session_state_utils.cc:427 SaveInitializedTensors] Done saving initialized tensors
+2026-10-31 14:14:46.914625390 [I:onnxruntime:, inference_session.cc:2106 Initialize] Session successfully initialized.
+session providers: ['NeuronExecutionProvider', 'CPUExecutionProvider'] load 0.2s
+{"tag": "", "model": "Atf16.onnx", "providers": ["NeuronExecutionProvider", "CPUExecutionProvider"], "active": ["NeuronExecutionProvider", "CPUExecutionProvider"], "load_s": 0.23, "mean_ms": 247.6926920004189, "p50_ms": 248.17330700170714, "p95_ms": 249.9748613947304, "runs": 5}

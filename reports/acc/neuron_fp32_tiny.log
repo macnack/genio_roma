@@ -1,0 +1,211 @@
+2026-10-31 14:14:18.291129157 [I:onnxruntime:, inference_session.cc:583 TraceSessionOptions] Session Options {  execution_mode:0 execution_order:DEFAULT enable_profiling:0 optimized_model_filepath:"" enable_mem_pattern:1 enable_mem_reuse:1 enable_cpu_mem_arena:1 profile_file_prefix:onnxruntime_profile_ session_logid: session_log_severity_level:0 session_log_verbosity_level:0 max_num_graph_transformation_steps:10 graph_optimization_level:3 intra_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } inter_op_param:OrtThreadPoolParams { thread_pool_size: 0 auto_set_affinity: 0 allow_spinning: 1 dynamic_block_base_: 0 stack_size: 0 affinity_str:  set_denormal_as_zero: 0 } use_per_session_threads:1 thread_pool_allow_spinning:1 use_deterministic_compute:0 config_options: {  } }
+2026-10-31 14:14:18.291233003 [I:onnxruntime:, inference_session.cc:483 operator()] Flush-to-zero and denormal-as-zero are off
+2026-10-31 14:14:18.291243926 [I:onnxruntime:, inference_session.cc:491 ConstructorCommon] Creating and using per session threadpools since use_per_session_threads_ is true
+2026-10-31 14:14:18.291252080 [I:onnxruntime:, inference_session.cc:509 ConstructorCommon] Dynamic block base set to 0
+INFO: Android SDK version: 31
+INFO: NeuronApi error: unable to open library libneuron_adapter.so, dllerror: 
+INFO: NeuronApi error: unable to open library libneuron_adapter.mtk.so, dllerror: 
+INFO: dlopen libneuronusdk_adapter.mtk.so
+INFO: Num devices: 2
+INFO: Got device name: mtk-dsp
+INFO: Got device name: mtk-mdla
+INFO: NeuronApi version: 8.2.16
+2026-10-31 14:14:18.392349619 [I:onnxruntime:, inference_session.cc:1669 Initialize] Initializing session.
+2026-10-31 14:14:18.394831080 [I:onnxruntime:, graph_partitioner.cc:898 InlineFunctionsAOT] This model does not have any local functions defined. AOT Inlining is not performed
+2026-10-31 14:14:18.395182311 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:18.395680080 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level1_RuleBasedTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.395819388 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DoubleQDQPairsRemover modified: 0 with status: OK
+2026-10-31 14:14:18.396588619 [I:onnxruntime:, constant_sharing.cc:248 ApplyImpl] Total shared scalar initializer count: 95
+2026-10-31 14:14:18.396611080 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantSharing modified: 1 with status: OK
+2026-10-31 14:14:18.400961695 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CommonSubexpressionElimination modified: 0 with status: OK
+2026-10-31 14:14:18.401222465 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantFolding modified: 0 with status: OK
+2026-10-31 14:14:18.401383465 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-10-31 14:14:18.401525772 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ReshapeFusion modified: 0 with status: OK
+2026-10-31 14:14:18.401535080 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FreeDimensionOverrideTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.401540772 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:18.401545619 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:18.401725311 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQPropagationTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.401882926 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:18.402024003 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RocmBlasAltImpl modified: 0 with status: OK
+2026-10-31 14:14:18.404045157 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer TransposeOptimizer modified: 1 with status: OK
+2026-10-31 14:14:18.407478619 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_33_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407512772 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_25_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407518542 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_23_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407522619 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_22_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407526619 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_21_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407530388 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_20_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407534157 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_24_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407538080 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_13_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407541695 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_12_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407545234 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_10_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407548772 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_9_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407552465 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_6_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407556157 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_3_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407559695 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_1_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407563388 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_7_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407568311 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_34_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407573003 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_27_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407583003 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407589619 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_15_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407593311 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_17_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407600695 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_26_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407606849 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_11_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407611234 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_5_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407633695 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_29_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407639619 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_18_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407644849 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_2_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407649234 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_0_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407653311 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_14_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407660388 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_19_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407666157 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_8_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407669849 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_31_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407674542 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_4_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407680234 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_28_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407684695 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_32_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407688234 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_16_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.407692157 [I:onnxruntime:, graph.cc:4351 CleanUnusedInitializersAndNodeArgs] Removing NodeArg 'Transpose_token_30_out0'. It is no longer used by any node.
+2026-10-31 14:14:18.408101157 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer Level1_RuleBasedTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.408249465 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer DoubleQDQPairsRemover modified: 0 with status: OK
+2026-10-31 14:14:18.408917695 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer CommonSubexpressionElimination modified: 0 with status: OK
+2026-10-31 14:14:18.409164695 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ConstantFolding modified: 0 with status: OK
+2026-10-31 14:14:18.409324080 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer MatMulAddFusion modified: 0 with status: OK
+2026-10-31 14:14:18.409468003 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer ReshapeFusion modified: 0 with status: OK
+2026-10-31 14:14:18.409476465 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer FreeDimensionOverrideTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.409482157 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer GeluFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:18.409487157 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer LayerNormFusionL1 modified: 0 with status: OK
+2026-10-31 14:14:18.409672157 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer QDQPropagationTransformer modified: 0 with status: OK
+2026-10-31 14:14:18.409827849 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer EnsureUniqueDQForNodeUnit modified: 0 with status: OK
+2026-10-31 14:14:18.409978234 [I:onnxruntime:, graph_transformer.cc:15 Apply] GraphTransformer RocmBlasAltImpl modified: 0 with status: OK
+ERROR: Target report:
+ERROR: NIR[0]: TransposeLayer<0>{TRANSPOSE}
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[1]: Conv2DLayer<1>{CONV_2D}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[2]: MeanLayer<2>{MEAN}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[3]: ElementWiseSubLayer<3>{SUB}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[4]: PowLayer<4>{POW}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[5]: MeanLayer<5>{MEAN}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[6]: ElementWiseAddLayer<6>{ADD}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[7]: SqrtLayer<7>{SQRT}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[8]: ElementWiseDivLayer<8>{DIV}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[9]: ElementWiseMulLayer<9>{MUL}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[10]: ElementWiseAddLayer<10>{ADD}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[11]: DepthwiseConv2DLayer<11>{DEPTHWISE_CONV_2D}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[12]: MeanLayer<12>{MEAN}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[13]: ElementWiseSubLayer<13>{SUB}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[14]: PowLayer<14>{POW}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[15]: MeanLayer<15>{MEAN}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[16]: ElementWiseAddLayer<16>{ADD}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[17]: SqrtLayer<17>{SQRT}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+NIR[18]: ElementWiseDivLayer<18>{DIV}
+ ├ EDMA: unsupported operation
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ VPU: unsupported data type: Float32
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+
+[1;31m2026-10-31 14:14:18.442227620 [E:neuron:neuron, neuron_model_builder.cc:1075 Compile] The model cannot run using the current set of target devices: [ [Name: [mtk-dsp]], [Name: [mtk-mdla]] ][m
+Traceback (most recent call last):
+  File "/home/ubuntu/bench_ort_neuron.py", line 22, in <module>
+    s = ort.InferenceSession(a.model, so, providers=provs, provider_options=popts)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/onnxruntime-neuron/python/onnxruntime/capi/onnxruntime_inference_collection.py", line 465, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/usr/lib/onnxruntime-neuron/python/onnxruntime/capi/onnxruntime_inference_collection.py", line 537, in _create_inference_session
+    sess.initialize_session(providers, provider_options, disabled_optimizers)
+onnxruntime.capi.onnxruntime_pybind11_state.EPFail: [ONNXRuntimeError] : 11 : EP_FAIL : Failed to Compile.

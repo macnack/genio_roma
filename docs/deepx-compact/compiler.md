@@ -47,7 +47,12 @@ Other
 
 ## Experimentally verified facts
 
-None yet (no DX-M1 available on host as of 2026-11-05).
+- DX-COM 2.4.1 compiled ConvNeXt-Tiny and -Small (A: facebookresearch IN-1K; B: HF DINOv3) as **1 NPU group, 0 CPU groups**, although the 2.4.1 tables list depthwise kernels 3x3/5x5 only and have no `LayerNormalization` row (the models have 18/36 depthwise 7x7 convs). The tables are conservative or incomplete; support is verified by compiling. (`reports/ops.md`; `models/A_fb_in1k/real_ptq13/compiler.log`)
+- The `SURGERY` "UnknownError" we first hit was caused by our own config (missing official preprocessing block), not by the model, the ops, the dependency versions or the compiler version. Which single key triggers it was not isolated. (`reports/ops.md`, "Correction")
+- Official-style preprocessing config works: resize 256 bicubic, centercrop 224, convertColor BGR2RGB, div 255, normalize, transpose [2,0,1], expandDim 0, `quantization_device: cpu`. The compiler fuses div/normalize/transpose; NPU input is uint8 NHWC [1,224,224,3]. (`scripts/compile_dxnn.sh`, `models/A_fb_in1k/real_ptq13/config.json`)
+- Compile times (laptop): A-tiny PTQ 108 s, A-small 389 s, B-tiny 424 s, B-small 481 s, A-tiny Q-Pro 9424 s. (`models/*/real_*/compile_time.txt`)
+- `calibration_method` `ema` vs `minmax` produced byte-identical `.dxnn` for A-tiny; unexplained. (`models/A_fb_in1k/real_minmax13/`, `reports/acc/A13_minmax_compare.json`)
+- Q-Pro (`--use_q_pro`) did not improve Top-1 over plain PTQ (79.8% vs 80.8%, inside the +-1.2-point interval) though logit cosine/KL improved. (`reports/accuracy.md`)
 
 ## Hypotheses needing validation
 
@@ -56,3 +61,4 @@ None yet (no DX-M1 available on host as of 2026-11-05).
 - Web docs (developer.deepx.ai, still listing DX-TRON and v2.4.0 nav) may lag repo v2.5.0; repo treated as authoritative. Check page version when quoting web.
 - DX-COM User Manual 2.5.0 appears on Document Download page (dated Nov 4, 2026) but file links were placeholders; format and URL unknown. [developer.deepx.ai/document-download/, fetched 2026-11-05] Check whether it has material beyond repo `source/docs`.
 - Compile determinism across hosts is not guaranteed. If reproducible `.dxnn` matters, test with `--float64_calibration` on two machines.
+- Why `minmax` and `ema` give identical output, and which preprocessing key triggers `SURGERY` on the first config, are open.

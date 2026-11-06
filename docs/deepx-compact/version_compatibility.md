@@ -74,12 +74,14 @@ Expected `dxcli -s` header for the 2026-10-23 set: `DXRT v3.5.0`, RT Driver v2.7
 
 ## Experimentally verified facts
 
-None yet (no DX-M1 available on host as of 2026-11-05).
+- DX-COM 2.4.1 (PyPI `dx-com==2.4.1`) emits `.dxnn` **format v8** (`dxparse` on the board: "DX-COM v2.4.1-rc.1", 1 task `npu_0 [NPU]`, no CPU task). RT 3.4.2 loads and runs it. So the older-compiler/older-runtime pair works, and a board upgrade to RT 3.5.0 is not needed for 2.4.1 output. (`reports/ops.md`, section "Board check"; `models/A_fb_in1k/real_ptq13/compiler.log`)
+- Documented (not tested here): DX-COM 2.5.0 emits only format v9, which needs RT >= 3.5.0. We compiled with 2.5.0 on the laptop (dw7 toy, A opset 13) but never pushed a v9 file to the board. (`reports/ops.md`)
+- Release dates: the 2.5.0 change log says 2026-10-16, the PyPI upload and suite matrix row say 2026-10-23; unreconciled. (`reports/ops.md` session notes; GitHub issue #1)
 
 ## Hypotheses needing validation
 
 - H1. DX-STREAM and DX-APP have no documented version-print command in files read. Settle: `gst-inspect-1.0 dxstream` (documented only for plugin registration [dx_stream@c575ed2896 v3.2.0: docs/source/docs/Appendix_Build_on_OrangePi5Plus.md#L342-L346]) and `release.ver`/`--help` of installed packages.
-- H2. Mixed pairs not in the matrix (e.g. DX-COM 2.5.0 with RT 3.4.2) are documented as incompatible only for `.dxnn` v9. Whether older DX-COM (<= 2.4.x, v8 or lower) models still load on RT 3.5.0 is not stated beyond DX-APP's "format >= v7" check. Settle: load an older `.dxnn` with `dxparse`/`dxrun` on RT 3.5.0.
+- H2. Whether `.dxnn` v8 files from DX-COM <= 2.4.x load on RT 3.5.0 is untested (v8 on RT 3.4.2 is verified); settle by loading an older `.dxnn` with `dxparse`/`dxrun` on RT 3.5.0.
 - H3. Whether FW/driver newer than the matrix row (e.g. `latest` pointers in `dx_fw`, one-liner tracking `main`) is safe is unspecified; docs warn only that combos may be unvalidated. Pin versions (`DX_RT_VERSION`, `DX_DRIVER_VERSION`, `DX_FW_VERSION`).
 - H4. Which of `dxcom -v` / `--version` works: run both on the installed DX-COM.
 - H5. Whether the Python 3.13 ABI of the bundled `dx_engine` wheel (cp313) matches RT 3.5.0 exactly. Settle: `pip install` the staged cp313 wheel, then `import dx_engine`.

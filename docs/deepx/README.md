@@ -31,7 +31,7 @@ Index of documents (this table is an index only; the claims live in the linked d
 
 ## Experimentally verified facts
 
-None yet (no DX-M1 available on host as of 2026-11-05).
+Board-side results now exist; the DX-M1 is on the Genio-700 board (adb), not on the laptop. See `board_discovery.md`, `board_summary.md` and `reports/` (ops, accuracy, cross_device, apu_neuron, gpu_armnn).
 
 ## Hypotheses needing validation
 

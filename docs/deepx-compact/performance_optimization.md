@@ -39,7 +39,10 @@ Citation prefixes: `RT` = `dx_rt@f997363c97 v3.5.0`, `BM` = `dx-all-suite@51d81f
 
 ## Experimentally verified facts
 
-None yet (no DX-M1 available on host as of 2026-11-05).
+- ConvNeXt-Tiny / Small on DX-M1 (RT 3.4.2, batch 1): NPU time 35.3 / 60.7 ms, latency 40.1 / 65.3 ms (`dx_engine`, 4000 images). (`reports/accuracy.md`, `reports/acc/A13_ptq_ema100_board.json`, `reports/acc/AS13_ptq_board.json`)
+- `dxrun -b` throughput: tiny 58.9 FPS on 3 cores, 28.3 on 1 core; small 34.4 / 16.5. `--buffer-count` saturates at 6 (tiny 24.4/39.8/53.4/58.9 FPS for 1/2/3/6 buffers). Single 10 s runs. (`reports/acc/sweep_dxrun.csv`, `scripts/sweep_dxrun.sh`)
+- Genio CPU FP32 baseline (ORT 1.31.1): tiny 156.7 ms all 8 cores, 207.4 ms on 2xA78; small 312 / 383 ms. DX-M1 single request is about 3.9x (tiny) / 4.8x (small) faster; not iso-precision. (`reports/cross_device.md`, `reports/acc/cpu_bench_board.jsonl`)
+- The board CPU is 6x Cortex-A55 (cores 0-5) + 2x Cortex-A78 (cores 6-7), not 4+4. (`lscpu`, recorded in `reports/cross_device.md`)
 
 ## Hypotheses needing validation
 
