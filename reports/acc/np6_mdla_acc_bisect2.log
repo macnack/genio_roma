@@ -1,0 +1,7 @@
+200 Gemm stages.1/stages.1.2/pwconv2/MatMul (784, 192) compile ['c=0'] size 150528 nonfinite 0 cos {'flat': 0.9999852180480957, 'nchw<-nhwc': None} refmax 4.254870891571045
+300 Erf /stages.2/stages.2.2/act/Erf (1, 14, 14, 1536) compile ['c=0'] size 301056 nonfinite 239623 cos {'flat': None, 'nchw<-nhwc': None} refmax 1.0
+400 Add /stages.2/stages.2.5/pwconv2/Add (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 75264 cos {'flat': None, 'nchw<-nhwc': None} refmax 18.321578979492188
+500 Pow layers.3/downsample_layers.3.0/Pow (1, 384, 14, 14) compile ['c=0'] size 75264 nonfinite 75264 cos {'flat': None, 'nchw<-nhwc': None} refmax 429.94720458984375
+560 Erf /stages.3/stages.3.1/act/Erf (1, 7, 7, 3072) compile ['c=0'] size 150528 nonfinite 150528 cos {'flat': None, 'nchw<-nhwc': None} refmax 1.0
+600 Transpose /stages.3/stages.3.2/Transpose_1 (1, 768, 7, 7) compile ['c=0'] size 37632 nonfinite 37632 cos {'flat': None, 'nchw<-nhwc': None} refmax 52.82173538208008
+609 Sqrt /norm/Sqrt (1, 768) compile ['c=0'] size 768 nonfinite 768 cos {'flat': None, 'nchw<-nhwc': None} refmax 2.5904009342193604

@@ -1,0 +1,15 @@
+subgraph[0]
+# of input tensors: 1
+[0]: input
+ ├ Type: kTfLiteFloat16
+ ├ AllocType: kTfLiteArenaRw
+ ├ Shape: {1,224,224,3}
+ └ Bytes: 301056
+
+# of output tensors: 1
+[0]: output
+ ├ Type: kTfLiteFloat16
+ ├ AllocType: kTfLiteArenaRw
+ ├ Shape: {1,1000}
+ └ Bytes: 2000
+

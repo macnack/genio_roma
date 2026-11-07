@@ -1,0 +1,21 @@
+== full_integer_quant
+ERROR: Fail to create tflite context
+      1 ERROR: Fail to create tflite context
+compile rc=1
+ERROR: Fail to create tflite context
+ls: cannot access 'At_full_integer_quant.dla': No such file or directory
+== integer_quant
+ERROR: Fail to create tflite context
+      1 ERROR: Fail to create tflite context
+compile rc=1
+ERROR: Fail to create tflite context
+ls: cannot access 'At_integer_quant.dla': No such file or directory
+Version: 6.2.3
+ERROR: Fail to create tflite context
+  ABS                            1,2,3,4
+  DEQUANTIZE                     1,2,3,4,5
+  EXP                            1
+  EXPAND_DIMS                    1
+  QUANTIZE                       1,2,3
+  RSQRT                          1,2
+  SQRT                           1

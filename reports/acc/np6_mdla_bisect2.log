@@ -1,0 +1,10 @@
+nodes 610
+12 Reshape /stages.0/stages.0.0/norm/ReduceMean_pre rc=0 | -rw-rw-rw- 1 root root 182408 Nov  1 05:20 ncc_p.dla
+14 Reshape stages.0/stages.0.0/norm/ReduceMean_post rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+16 Pow /stages.0/stages.0.0/norm/Pow rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+18 MatMul /stages.0/stages.0.0/norm/ReduceMean_1 rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+20 Add /stages.0/stages.0.0/norm/Add rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+22 Div /stages.0/stages.0.0/norm/Div rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+24 Add /stages.0/stages.0.0/norm/Add_1 rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+26 MatMul /stages.0/stages.0.0/pwconv1/MatMul rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+28 Add /stages.0/stages.0.0/pwconv1/Add rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory

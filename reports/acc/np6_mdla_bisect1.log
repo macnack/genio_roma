@@ -1,0 +1,9 @@
+nodes 610
+0 Conv mple_layers.0/downsample_layers.0.0/Conv rc=0 | -rw-rw-rw- 1 root root 20470 Nov  1 05:18 ncc_p.dla
+9 Add ple_layers.0/downsample_layers.0.1/Add_1 rc=0 | -rw-rw-rw- 1 root root 232048 Nov  1 05:18 ncc_p.dla
+11 Transpose /stages.0/stages.0.0/Transpose rc=0 | -rw-rw-rw- 1 root root 182408 Nov  1 05:18 ncc_p.dla
+30 Erf /stages.0/stages.0.0/act/Erf rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+60 Div /stages.0/stages.0.1/act/Div rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+120 Reshape tages.1/stages.1.0/norm/ReduceMean_1_pre rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+300 Mul /stages.2/stages.2.2/act/Mul rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
+609 Gemm /head/Gemm rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory

@@ -1,0 +1,6 @@
+230 Div /stages.2/stages.2.0/norm/Div (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 64 cos {'flat': None, 'nchw<-nhwc': None} refmax 9.225737571716309
+260 Sqrt /stages.2/stages.2.1/norm/Sqrt (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 18816 cos {'flat': None, 'nchw<-nhwc': None} refmax 1.0170495510101318
+280 Conv /stages.2/stages.2.2/dwconv/Conv (1, 384, 14, 14) compile ['c=0'] size 75264 nonfinite 59904 cos {'flat': None, 'nchw<-nhwc': None} refmax 8.980156898498535
+320 Reshape /stages.2.3/norm/ReduceMean_1_post (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 75264 cos {'flat': None, 'nchw<-nhwc': None} refmax 2.4145047664642334
+350 Gemm ges.2/stages.2.4/norm/ReduceMean_1 (196, 384) compile ['c=0'] size 75264 nonfinite 75264 cos {'flat': None, 'nchw<-nhwc': None} refmax 3.8652989864349365
+380 Reshape 2/stages.2.5/norm/ReduceMean_1_pre (196, 384) compile ['c=0'] size 75264 nonfinite 75264 cos {'flat': None, 'nchw<-nhwc': None} refmax 1080.1707763671875

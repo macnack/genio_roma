@@ -1,0 +1,4 @@
+INFO: dlopen libneuronusdk_runtime.mtk.so
+INFO: dlopen libneuronusdk_runtime.mtk.so
+Inference repeats for 50 times.
+Total inference time = 2798 ms

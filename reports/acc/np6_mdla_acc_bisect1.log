@@ -1,0 +1,6 @@
+0 Conv ayers.0/downsample_layers.0.0/Conv (1, 96, 56, 56) compile ['c=0'] size 301056 nonfinite 0 cos {'flat': 0.0008278899476863444, 'nchw<-nhwc': 0.9999985098838806} refmax 4.764881134033203
+9 Add yers.0/downsample_layers.0.1/Add_1 (1, 96, 56, 56) compile ['c=0'] size 301056 nonfinite 0 cos {'flat': 0.9999983310699463, 'nchw<-nhwc': 0.0006524614291265607} refmax 3.270904064178467
+11 Transpose /stages.0/stages.0.0/Transpose (1, 56, 56, 96) compile ['c=0'] size 301056 nonfinite 0 cos {'flat': 0.9999988675117493, 'nchw<-nhwc': 0.0016756493132561445} refmax 2.0743656158447266
+30 Erf /stages.0/stages.0.0/act/Erf (1, 56, 56, 384) compile ['c=0'] size 1204224 nonfinite 115 cos {'flat': None, 'nchw<-nhwc': None} refmax 1.0
+60 Div /stages.0/stages.0.1/act/Div (1, 56, 56, 384) compile ['c=0'] size 1204224 nonfinite 0 cos {'flat': 0.9999922513961792, 'nchw<-nhwc': 0.4163320064544678} refmax 6.553145885467529
+120 Reshape 1/stages.1.0/norm/ReduceMean_1_pre (784, 192) compile ['c=0'] size 150528 nonfinite 0 cos {'flat': 0.9999969601631165, 'nchw<-nhwc': None} refmax 46.10113525390625

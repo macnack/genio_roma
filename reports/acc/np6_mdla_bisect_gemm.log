@@ -1,0 +1,4 @@
+nodes 610
+13 Gemm /stages.0/stages.0.0/norm/ReduceMean rc=0 | -rw-rw-rw- 1 root root 381388 Nov  1 05:20 ncc_p.dla
+30 Erf /stages.0/stages.0.0/act/Erf rc=0 | -rw-rw-rw- 1 root root 474622 Nov  1 05:20 ncc_p.dla
+609 Gemm /head/Gemm rc=0 | -rw-rw-rw- 1 root root 83358848 Nov  1 05:20 ncc_p.dla

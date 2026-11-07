@@ -1,0 +1,8 @@
+205 Add /stages.1/stages.1.2/Add (1, 192, 28, 28) compile ['c=0'] size 150528 nonfinite 0 cos {'flat': 0.9999980926513672, 'nchw<-nhwc': -0.00017949943139683455} refmax 114.8912582397461
+213 Sqrt ayers.2/downsample_layers.2.0/Sqrt (1, 192, 28, 28) compile ['c=0'] size 150528 nonfinite 0 cos {'flat': 0.9606492519378662, 'nchw<-nhwc': 1.0000003576278687} refmax 8.629145622253418
+216 Add yers.2/downsample_layers.2.0/Add_1 (1, 192, 28, 28) compile ['c=0'] size 150528 nonfinite 0 cos {'flat': 0.9999921917915344, 'nchw<-nhwc': -0.0018034708919003606} refmax 2.538522720336914
+217 Conv ayers.2/downsample_layers.2.1/Conv (1, 384, 14, 14) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 9.700498048914596e-05, 'nchw<-nhwc': 0.999996542930603} refmax 13.13288688659668
+218 Conv /stages.2/stages.2.0/dwconv/Conv (1, 384, 14, 14) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.0022024104837328196, 'nchw<-nhwc': 0.999997615814209} refmax 9.847909927368164
+222 Reshape .2/stages.2.0/norm/ReduceMean_post (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.9999960064888, 'nchw<-nhwc': 0.25517702102661133} refmax 0.08111608028411865
+224 Pow /stages.2/stages.2.0/norm/Pow (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.9999985098838806, 'nchw<-nhwc': 0.06756886839866638} refmax 97.7198257446289
+228 Add /stages.2/stages.2.0/norm/Add (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.7956218719482422, 'nchw<-nhwc': 0.7444718480110168} refmax 1.5381776094436646

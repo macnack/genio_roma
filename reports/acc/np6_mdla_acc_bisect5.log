@@ -1,0 +1,3 @@
+225 Reshape 2/stages.2.0/norm/ReduceMean_1_pre (196, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.9999985098838806, 'nchw<-nhwc': None} refmax 97.7198257446289
+226 Gemm ges.2/stages.2.0/norm/ReduceMean_1 (196, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.9999983906745911, 'nchw<-nhwc': None} refmax 1.5381766557693481
+227 Reshape /stages.2.0/norm/ReduceMean_1_post (1, 14, 14, 384) compile ['c=0'] size 75264 nonfinite 0 cos {'flat': 0.9999983906745911, 'nchw<-nhwc': 0.951612651348114} refmax 1.5381766557693481

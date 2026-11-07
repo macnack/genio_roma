@@ -1,0 +1,2 @@
+nodes 610
+13 MatMul /stages.0/stages.0.0/norm/ReduceMean rc=139 | Segmentation fault (core dumped) | ls: cannot access 'ncc_p.dla': No such file or directory
