@@ -96,3 +96,10 @@ Built like the GPU minimal set: `rewrite_matmul_reshape` + `rewrite_mean --broad
 | A-tiny, earlier full-mean set + eps fold (`mdla_At16.*`) | 56.0 | 82.03 / 95.78 | 81.93 | 99.18% | - | 1 image |
 
 The earlier variant's lower fidelity and the one inf image are therefore attributable to the extra Gemm-based means, not to the MDLA FP16 path in general (verified only for these two models).
+
+
+## Board cleanup (2026-11-07, approved by the user)
+Removed the NeuroPilot 8 set that did not work on this board (EFAULT on `/dev/apusys`): `python3-onnxruntime-neuron libonnxruntime-neuron libneuropilot8 libneuropilot8-mdw libneuropilot8-nhw` (`apt-get remove`, then `dpkg --purge libneuropilot8-nhw` for its `/etc/apusys/*/nhw` conffiles). Simulated first; no other packages affected, and the package did not own `/etc/nhw`.
+Kept: Arm NN 23.08 + PyArmNN (GPU path), `clinfo`, `libc++*`/`python3-numpy` pulled in earlier (not re-checked for other users), the private `/home/ubuntu/np6/` NeuroPilot 6 directory, and the `nhw` firmware file + `/etc/nhw` symlink.
+Verified after removal: `neuronrt -m hw -a At_M16.dla -c 20` still runs (20 inferences in 1092 ms); `import pyarmnn` works (33.0.0). Not re-run: a GPU inference and the full evals.
+Reinstall (if ever needed): the debs are in `data/board_debs/` on the laptop (`dpkg -i`), but NeuroPilot 8 is not expected to work on this kernel.
