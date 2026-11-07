@@ -1,0 +1,17 @@
+== L_noNCHW run1
+timeout: the monitored command dumped core
+Aborted
+== L_noNCHW run2
+timeout: the monitored command dumped core
+Aborted
+OK (1, 1000) 0.15435825288295746
+== L_noNHWC run1
+OK (1, 1000) 0.15435825288295746
+== L_noNHWC run2
+OK (1, 1000) 0.15435825288295746
+OK (1, 1000) 0.15435825288295746
+== L_noFLAT run1
+OK (1, 1000) 0.15435828268527985
+== L_noFLAT run2
+OK (1, 1000) 0.15435828268527985
+OK (1, 1000) 0.15435825288295746

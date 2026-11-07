@@ -33,7 +33,26 @@ request is rejected with `EFAULT`. The kernel header package contains only a ske
 so the ioctl definitions could not be compared. Resolution needs a matching kernel/userspace pair from MediaTek or Grinn (MediaTek docs say
 the Neuron EP is enabled by default only on Genio 720/520 and Genio 700 needs a MediaTek representative [ORT acceleration page]).
 
+## Follow-up 2026-11-07: wrong package generation (strongest lead, NOT yet tested on the board)
+Everything above used NeuroPilot **8** (`libneuropilot8` 8.2.16, PPA `baoshan-team`, a third-party PPA, not MediaTek's). MediaTek's own Ubuntu
+instructions for Genio 700 use NeuroPilot **6**: `sudo apt install mediatek-libneuron mediatek-neuron-utils` (+ `mediatek-apusys-firmware-genio700`), verified with
+`sudo vpu5_test -a ks -l 10` (expected PASS) [https://genio.mediatek.com/doc/ubuntu/bsp-installation/neuropilot.html]. The same MediaTek docs say the NeuronExecutionProvider
+for ONNX Runtime on Genio 700/510 needs a MediaTek representative; the baoshan PPA build was not made for it.
+Facts checked on 2026-11-07 (read-only, laptop + board `dpkg`):
+- The NP6 packages exist in `ppa:mediatek-genio/genio-public`, **Ubuntu 22.04 (jammy) only**, arm64: `mediatek-libneuron` 6.0+genio23.2-0genio1 (libneuronusdk 6.3.3, libapu_mdw 2.0.0,
+  libvpu5), `mediatek-neuron-utils` same version (contains `neuronrt`, `ncc-tflite`, `vpu5_test`, `mdla3_player`, `apu_mdw_test`), `mediatek-apusys-firmware-genio700` 0.9+genio23.2-0genio3.
+  There is no noble (24.04) build. This board runs Ubuntu 24.04 with Grinn's 6.8.0-9003-mtk kernel.
+- Installed on the board: only NP8 (`libneuropilot8*`); none of `mediatek-libneuron`, `mediatek-neuron-utils`, `mediatek-apusys-firmware-genio700`. The board already has
+  `linux-firmware-mediatek-genio` 25.0.4 which ships `/lib/firmware/mediatek/mt8390/apusys.sig.img` (same paths as the genio700 firmware deb, so installing that deb would conflict; it should not be installed).
+- NP6 needs `libtinfo.so.5` (jammy `libtinfo5`, universe), absent on noble; NP6 `libc++` deps are already installed.
+- `ncc-tflite` and `neuronrt` are therefore public (earlier note "NDA SDK" was wrong for NP6).
+- NP8 reads `/etc/apusys/mt8188`, `mt8189`, `mt8195` (its own nhw blobs), not `mt8390`; NP6's firmware deb ships `mt8390/nhw` and `/etc/nhw`.
+Hypothesis (unverified): the first `/dev/apusys` ioctls from NP8 userspace (struct sizes 0x28 / 0x30) do not match the apusys driver generation in this kernel, which MediaTek ships
+with NP6 userspace for Genio 700; EFAULT is what a size/layout mismatch in `copy_from_user` would give. A non-invasive test (unpack the NP6 debs into a private directory,
+`LD_LIBRARY_PATH` + private libtinfo5, run `vpu5_test -a ks -l 10` and `neuronrt`) was prepared in `data/board_debs_np6/np6` but NOT run: running third-party binaries
+on the board needs the user's go-ahead. Nothing on the board was changed for this follow-up.
+
 ## Not done
-- Ahead-of-time compile with `ncc-tflite` and run with `neuronrt` (NDA SDK, not available).
+- Ahead-of-time compile with `ncc-tflite` and run with `neuronrt` (needs the NP6 packages above).
 - INT8 QDQ model through the Neuron EP (stack fails before model-specific code, so FP16/INT8 choice is moot).
 - Any APU latency or accuracy number: none exists.

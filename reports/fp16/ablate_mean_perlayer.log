@@ -1,0 +1,22 @@
+== X_no_ds0 run1
+OK (1, 1000) 0.6791650056838989
+== X_no_ds0 run2
+OK (1, 1000) 0.72807377576828
+== X_no_ds1 run1
+timeout: the monitored command dumped core
+Aborted
+== X_no_ds1 run2
+timeout: the monitored command dumped core
+Aborted
+== X_no_ds2 run1
+timeout: the monitored command dumped core
+Aborted
+== X_no_ds2 run2
+timeout: the monitored command dumped core
+Aborted
+== X_no_ds3 run1
+timeout: the monitored command dumped core
+Aborted
+== X_no_ds3 run2
+timeout: the monitored command dumped core
+Aborted

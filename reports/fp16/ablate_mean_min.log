@@ -1,0 +1,22 @@
+== M_bc run1
+OK (1, 1000) 0.15435831248760223
+== M_bc run2
+OK (1, 1000) 0.15435831248760223
+control:
+OK (1, 1000) 0.15435825288295746
+== M_nobc run1
+timeout: the monitored command dumped core
+Aborted
+== M_nobc run2
+timeout: the monitored command dumped core
+Aborted
+control:
+OK (1, 1000) 0.15435825288295746
+== G_only run1
+timeout: the monitored command dumped core
+Aborted
+== G_only run2
+timeout: the monitored command dumped core
+Aborted
+control:
+OK (1, 1000) 0.15435825288295746

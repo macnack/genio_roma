@@ -1,0 +1,25 @@
+== control
+OK (1, 1000) 0.15435825288295746
+== R5_bc_noGAP
+timeout: the monitored command dumped core
+Aborted
+== control
+OK (1, 1000) 0.15435825288295746
+== R1_nobroadcast_all
+timeout: the monitored command dumped core
+Aborted
+== control
+OK (1, 1000) 0.15435825288295746
+== R4_bc_flat_gap
+timeout: the monitored command dumped core
+Aborted
+== control
+OK (1, 1000) 0.15435825288295746
+== R3_bc_nchw
+timeout: the monitored command dumped core
+Aborted
+== control
+OK (1, 1000) 0.15435825288295746
+== R2_bc_nhwc
+timeout: the monitored command dumped core
+Aborted

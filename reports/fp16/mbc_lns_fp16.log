@@ -1,0 +1,2 @@
+{"model": "At_Mbc_lns.tflite", "cos": [0.99989, 0.99967, 0.9998, 0.99974], "max_abs": 0.10874366760253906, "fp32_absmax": 9.46286392211914, "fp16_nonfinite": 0, "fp16_absmax": 9.546875}
+{"tag": "Mbc_lns_fp16", "model": "At_Mbc_lns.tflite", "backends": "GpuAcc,CpuAcc", "fp16": true, "optimize_s": 0.18, "load_s": 2.2, "mean_ms": 132.6964884494373, "p50_ms": 132.75923099718057, "p95_ms": 133.16562729305588, "runs": 20, "gpu_cur_freq_samples": ["950000000"], "gpu_trans_stat_changed": true, "max_abs_vs_ref": 0.061026036739349365, "cos_vs_ref": 0.997081995010376}

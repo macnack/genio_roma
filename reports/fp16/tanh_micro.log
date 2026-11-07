@@ -1,0 +1,6 @@
+tanh1 {"model": "mt_tanh1.tflite", "cos": [0.99998, 0.99999], "max_abs": 0.00040072202682495117, "fp32_absmax": 0.9898667335510254, "fp16_nonfinite": 0, "fp16_absmax": 0.98974609375}
+tanh2 {"model": "mt_tanh2.tflite", "cos": [0.99992, 0.99987], "max_abs": 0.0003663301467895508, "fp32_absmax": 0.9999481439590454, "fp16_nonfinite": 0, "fp16_absmax": 1.0}
+tanh3 {"model": "mt_tanh3.tflite", "cos": [0.99995, 0.99993], "max_abs": 0.0004807710647583008, "fp32_absmax": 0.9999997615814209, "fp16_nonfinite": 0, "fp16_absmax": 1.0}
+tanh4 {"model": "mt_tanh4.tflite", "cos": [0.99994, 0.99995], "max_abs": 0.0003414154052734375, "fp32_absmax": 1.0, "fp16_nonfinite": 0, "fp16_absmax": 1.0}
+tanh8 {"model": "mt_tanh8.tflite", "cos": [0.99996, 0.99998], "max_abs": 0.0003414154052734375, "fp32_absmax": 1.0, "fp16_nonfinite": 0, "fp16_absmax": 1.0}
+mul8 timeout: the monitored command dumped core

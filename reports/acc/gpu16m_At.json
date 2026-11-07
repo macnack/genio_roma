@@ -1,0 +1,10 @@
+{
+ "model": "At_Mbc_lns.tflite",
+ "backends": "GpuAcc,CpuAcc",
+ "fp16": true,
+ "n": 4000,
+ "wall_s": 554.2970607280731,
+ "run_ms_mean": 133.79123467230602,
+ "run_ms_p50": 133.68657699902542,
+ "run_ms_p95": 134.85850719516748
+}

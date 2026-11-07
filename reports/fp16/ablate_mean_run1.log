@@ -1,0 +1,20 @@
+== R1_nobroadcast_all
+  what():  clEnqueueMapBuffer
+timeout: the monitored command dumped core
+Aborted
+== R2_bc_nhwc
+Aborted
+  what():  clEnqueueMapBuffer
+timeout: the monitored command dumped core
+== R3_bc_nchw
+  what():  clEnqueueMapBuffer
+timeout: the monitored command dumped core
+Aborted
+== R4_bc_flat_gap
+  what():  clEnqueueMapBuffer
+timeout: the monitored command dumped core
+Aborted
+== R5_bc_noGAP
+  what():  clEnqueueMapBuffer
+timeout: the monitored command dumped core
+Aborted

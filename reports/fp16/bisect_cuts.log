@@ -1,0 +1,24 @@
+40 Add /stages.0/stages.0.0/Add timeout: the monitored command dumped core
+103 Conv ple_layers.1/downsample_layers.1.0/ReduceMean {"model": "f16_p103.tflite", "cos": [0.99992, 1.00004], "max_abs": 0.028718411922454834, "fp32_absmax": 0.6518397331237793, "fp16_nonfinite": 0, "fp16_absmax": 0.65283203125}
+207 Sub downsample_layers.2/downsample_layers.2.0/Sub timeout: the monitored command dumped core
+209 Conv e_layers.2/downsample_layers.2.0/ReduceMean_1 {"model": "f16_p209.tflite", "cos": [1.00002, 1.0001], "max_abs": 4.8500823974609375, "fp32_absmax": 74.53758239746094, "fp16_nonfinite": 0, "fp16_absmax": 69.875}
+300 Mul /stages.2/stages.2.2/act/Mul {"model": "f16_p300.tflite", "cos": [NaN, NaN], "max_abs": NaN, "fp32_absmax": 10.103398323059082, "fp16_nonfinite": 75, "fp16_absmax": 10.078125}
+496 Sub downsample_layers.3/downsample_layers.3.0/Sub timeout: the monitored command dumped core
+498 Conv e_layers.3/downsample_layers.3.0/ReduceMean_1 {"model": "f16_p498.tflite", "cos": [NaN, NaN], "max_abs": Infinity, "fp32_absmax": 4627.39794921875, "fp16_nonfinite": 147456, "fp16_absmax": 204.375}
+214 Add wnsample_layers.2/downsample_layers.2.0/Add_1 timeout: the monitored command dumped core
+216 Conv /stages.2/stages.2.0/dwconv/Conv {"model": "f16_p216.tflite", "cos": [0.99999, 0.99998], "max_abs": 0.03745722770690918, "fp32_absmax": 9.845666885375977, "fp16_nonfinite": 0, "fp16_absmax": 9.875}
+230 Add /stages.2/stages.2.0/norm/Add_1 {"model": "f16_p230.tflite", "cos": [0.99998, 0.99997], "max_abs": 0.02771615982055664, "fp32_absmax": 2.8323447704315186, "fp16_nonfinite": 0, "fp16_absmax": 2.8515625}
+234 Add /stages.2/stages.2.0/pwconv1/Add {"model": "f16_p234.tflite", "cos": [0.99997, 0.99997], "max_abs": 0.05091297626495361, "fp32_absmax": 7.276463508605957, "fp16_nonfinite": 0, "fp16_absmax": 7.27734375}
+239 Mul /stages.2/stages.2.0/act/Mul_1 {"model": "f16_p239.tflite", "cos": [0.99995, 0.99992], "max_abs": 0.0546950101852417, "fp32_absmax": 4.205933570861816, "fp16_nonfinite": 0, "fp16_absmax": 4.23828125}
+246 Add /stages.2/stages.2.0/Add timeout: the monitored command dumped core
+270 Mul /stages.2/stages.2.1/act/Mul_1 {"model": "f16_p270.tflite", "cos": [0.99993, 0.99991], "max_abs": 0.050860196352005005, "fp32_absmax": 4.457772731781006, "fp16_nonfinite": 0, "fp16_absmax": 4.4453125}
+278 Conv /stages.2/stages.2.2/dwconv/Conv {"model": "f16_p278.tflite", "cos": [0.99997, 0.99997], "max_abs": 0.05955314636230469, "fp32_absmax": 9.12374210357666, "fp16_nonfinite": 0, "fp16_absmax": 9.1640625}
+292 Add /stages.2/stages.2.2/norm/Add_1 {"model": "f16_p292.tflite", "cos": [0.99995, 0.99995], "max_abs": 0.04700678586959839, "fp32_absmax": 4.350507736206055, "fp16_nonfinite": 0, "fp16_absmax": 4.34765625}
+296 Add /stages.2/stages.2.2/pwconv1/Add {"model": "f16_p296.tflite", "cos": [0.99996, 0.99998], "max_abs": 0.06154513359069824, "fp32_absmax": 6.315226078033447, "fp16_nonfinite": 0, "fp16_absmax": 6.30078125}
+298 Erf /stages.2/stages.2.2/act/Erf {"model": "f16_p298.tflite", "cos": [NaN, NaN], "max_abs": NaN, "fp32_absmax": 1.0, "fp16_nonfinite": 75, "fp16_absmax": 1.0}
+301 Mul /stages.2/stages.2.2/act/Mul_1 {"model": "f16_p301.tflite", "cos": [0.99993, 0.99991], "max_abs": 0.05747628211975098, "fp32_absmax": 5.051700592041016, "fp16_nonfinite": 0, "fp16_absmax": 5.0390625}
+363 Mul /stages.2/stages.2.4/act/Mul_1 {"model": "f16_p363.tflite", "cos": [0.99992, 0.99992], "max_abs": 0.054412841796875, "fp32_absmax": 4.821582317352295, "fp16_nonfinite": 0, "fp16_absmax": 4.83984375}
+456 Mul /stages.2/stages.2.7/act/Mul_1 {"model": "f16_p456.tflite", "cos": [0.99993, 0.9999], "max_abs": 0.056345462799072266, "fp32_absmax": 6.10769510269165, "fp16_nonfinite": 0, "fp16_absmax": 6.125}
+487 Mul /stages.2/stages.2.8/act/Mul_1 {"model": "f16_p487.tflite", "cos": [0.99992, 0.99991], "max_abs": 0.06568074226379395, "fp32_absmax": 8.15416431427002, "fp16_nonfinite": 0, "fp16_absmax": 8.171875}
+528 Mul /stages.3/stages.3.0/act/Mul_1 {"model": "f16_p528.tflite", "cos": [0.19986, 0.06594], "max_abs": 10.961402893066406, "fp32_absmax": 10.931251525878906, "fp16_nonfinite": 0, "fp16_absmax": 5.85546875}
+590 Mul /stages.3/stages.3.2/act/Mul_1 {"model": "f16_p590.tflite", "cos": [0.36502, 0.01281], "max_abs": 12.340679168701172, "fp32_absmax": 12.340679168701172, "fp16_nonfinite": 0, "fp16_absmax": 15.703125}

@@ -8,6 +8,12 @@ Every rewrite is printed; ORT parity vs the input model is checked."""
 import sys, numpy as np, onnx, onnxruntime as ort
 from onnx import helper as h, numpy_helper as nh, shape_inference
 BC = "--broadcast" in sys.argv   # materialise the mean at full width (C outputs) so later Sub/Div have same-shape operands
+ONLY = None   # --only nchw_c,nhwc_c,flat_c,gap : rewrite just these kinds, keep the other ReduceMean nodes untouched (ablation)
+if "--only" in sys.argv:
+    i = sys.argv.index("--only"); ONLY = set(sys.argv[i + 1].split(",")); del sys.argv[i:i + 2]
+EXCL = None   # --exclude SUBSTR : keep (do not rewrite) ReduceMean nodes whose name contains SUBSTR (leave-one-out ablation)
+if "--exclude" in sys.argv:
+    i = sys.argv.index("--exclude"); EXCL = sys.argv[i + 1]; del sys.argv[i:i + 2]
 sys.argv = [a for a in sys.argv if a != "--broadcast"]
 src, dst = sys.argv[1], sys.argv[2]
 m = shape_inference.infer_shapes(onnx.load(src))
@@ -18,6 +24,10 @@ for n in m.graph.node:
     if n.op_type != "ReduceMean": out.append(n); continue
     s = sh[n.input[0]]; ax = next((list(a.ints) for a in n.attribute if a.name == "axes"), None)
     kd = next((a.i for a in n.attribute if a.name == "keepdims"), 1); x, y, nm = n.input[0], n.output[0], n.name
+    kind = ("nchw_c" if len(s) == 4 and ax == [1] and kd == 1 else "nhwc_c" if len(s) == 4 and ax == [-1] and kd == 1 else
+            "flat_c" if len(s) == 2 and ax == [-1] and kd == 1 else "gap" if len(s) == 4 and sorted(ax) == [-2, -1] and kd == 0 else None)
+    if (ONLY is not None and kind not in ONLY) or (EXCL is not None and EXCL in nm):
+        out.append(n); cnt["kept_" + str(kind)] = cnt.get("kept_" + str(kind), 0) + 1; continue
     if len(s) == 4 and ax == [1] and kd == 1:
         C = s[1]; add_init(nm + "_w", np.full((C if BC else 1, C, 1, 1), 1.0 / C, np.float32))
         out.append(h.make_node("Conv", [x, nm + "_w"], [y], name=nm, kernel_shape=[1, 1])); k = "nchw_c"
