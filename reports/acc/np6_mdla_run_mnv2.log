@@ -1,0 +1,12 @@
+INFO: dlopen libneuronusdk_runtime.mtk.so
+Inference repeats for 20 times.
+Total inference time = 23 ms
+-rw-rw-rw- 1 root root 1001 Oct 31 23:36 out0.bin
+[90582.866679] [apu_top_3] [mt8188_apu_devfreq_cooling_start][346] ++
+[90582.866688] mt8188_apu_top_on -
+[90582.869171] mtk-apu 190e1000.apusys_rv: apu_deepidle_power_on_aputop: warm boot done
+[90582.866670] [apu_top_3] __apu_wake_rpc_rcx after wakeup RCX APU_RPC_INTF_PWR_RDY 0x190f0044 = 0x3
+[90582.866674] [__apu_xpu2apusys_d4_slv_en] xpu2apusys d4 slv dis
+[90582.866679] [apu_top_3] [mt8188_apu_devfreq_cooling_start][346] ++
+[90582.866688] mt8188_apu_top_on -
+[90582.869171] mtk-apu 190e1000.apusys_rv: apu_deepidle_power_on_aputop: warm boot done

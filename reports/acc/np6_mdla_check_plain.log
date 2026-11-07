@@ -1,0 +1,40 @@
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<199>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<202>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<216>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<219>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<233>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<236>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<250>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<253>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<267>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<270>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<284>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<287>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<313>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<316>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<330>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<333>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<347>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Invalid BatchMatMulLayer<350>{BATCH_MATMUL}: check the messages above for the cause of the error
+WARNING: input rank is invalid
+ERROR: Fail to verify the given module
+ERROR: Fail to process the input model
+ERROR: Fail to check target support

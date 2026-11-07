@@ -1,0 +1,10 @@
+== -O0
+Segmentation fault (core dumped)
+== --no-verify
+Segmentation fault (core dumped)
+== --verbose
+>> Map DIV Done
+>> Map MUL Done
+>> Map ADD Done
+>> Map FULLY_CONNECTED Done
+Segmentation fault (core dumped)

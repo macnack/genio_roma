@@ -56,3 +56,18 @@ on the board needs the user's go-ahead. Nothing on the board was changed for thi
 - Ahead-of-time compile with `ncc-tflite` and run with `neuronrt` (needs the NP6 packages above).
 - INT8 QDQ model through the Neuron EP (stack fails before model-specific code, so FP16/INT8 choice is moot).
 - Any APU latency or accuracy number: none exists.
+
+## MDLA test with NeuroPilot 6 (2026-11-07, after approval to create `/etc/nhw`)
+
+System change made with the user's approval: installed the 944 B `nhw` file (from the `mediatek-genio-...` firmware deb, extracted on the laptop, not via dpkg) to `/lib/firmware/mediatek/mt8390/nhw` and symlinked `/etc/nhw` to it. Undo: `sudo rm /etc/nhw /lib/firmware/mediatek/mt8390/nhw`.
+
+Verified:
+- `ncc-tflite --arch=?` now lists `mdla3.0`, `tflite_cpu`, `vpu`.
+- Toolchain sanity: `mobilenet_v2_1.0_224_quant.tflite` compiles with `--arch=mdla3.0` to a 3.67 MB DLA; `neuronrt -m hw -a mnv2.dla -i in0.bin -o out0.bin -c 20` ran 20 inferences in 23 ms total, and `dmesg` shows `mt8188_apu_top_on`/`power off done` around the run (`reports/acc/np6_mdla_run_mnv2.log`). Input was zeros, so this proves execution on the APU path, not output correctness. Per-op MDLA placement was not inspected.
+- ConvNeXt-Tiny, raw TFLite (`onnx2tf`, no rewrites): `--check-target-only` rejects all 74 `BATCH_MATMUL` nodes ("input rank is invalid"), same 4Dx2D pattern as on the GPU.
+- ConvNeXt-Tiny with the logged GPU rewrites (`A_tiny_gpu`, `A_tiny_gpuB`, FP32): passes verification, but MDLA reports "Cannot support Float32 input/output" on every op; `--relax-fp32` does not change the check-only report.
+- With FP16 weights (`A_tiny_gpuB_float16.tflite`): `--check-target-only` exits 0 with no unsupported-op report.
+
+Blocker (verified): the real compile `ncc-tflite --arch=mdla3.0 [-O0|--no-verify|--relax-fp32] -d out.dla <model>` **segfaults** inside the compiler (after "Map FULLY_CONNECTED Done" with `--verbose`) for both the FP32+`--relax-fp32` and the FP16 model. gdb backtrace has no symbols (`reports/acc/np6_mdla_compile_gdb_bt.log`). `--arch=vpu` fails: "unsupported data type: Float16".
+Unknown: which op or tensor triggers the crash; whether INT8 TFLite compiles; whether the jammy-built compiler on noble is the cause. Hypothesis only.
+ConvNeXt has NOT run on the MDLA.

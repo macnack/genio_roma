@@ -1,0 +1,2787 @@
+OP[0]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[1]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[2]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[3]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: permSupport == perm 4D permutation not support
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[4]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[5]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[6]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[7]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[8]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[9]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[10]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[11]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[12]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[13]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[14]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[15]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[16]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[17]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[18]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[19]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[20]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[21]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[22]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[23]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[24]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[25]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[26]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[27]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[28]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[29]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[30]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[31]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[32]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[33]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[34]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[35]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[36]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[37]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[38]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[39]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[40]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[41]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[42]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[43]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[44]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[45]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[46]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[47]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[48]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[49]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[50]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[51]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[52]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[53]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[54]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[55]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[56]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[57]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[58]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[59]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[60]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[61]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[62]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[63]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[64]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[65]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[66]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[67]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[68]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[69]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[70]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[71]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[72]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[73]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[74]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[75]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[76]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[77]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[78]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[79]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[80]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[81]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[82]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[83]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[84]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[85]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[86]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[87]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[88]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[89]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[90]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[91]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[92]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[93]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[94]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[95]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[96]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[97]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[98]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[99]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[100]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[101]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[102]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[103]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[104]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[105]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[106]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[107]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[108]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[109]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[110]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[111]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[112]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[113]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: permSupport == perm 4D permutation not support
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[114]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[115]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[116]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[117]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[118]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[119]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[120]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[121]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[122]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[123]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[124]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[125]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[126]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[127]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[128]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[129]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[130]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[131]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[132]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[133]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[134]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[135]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[136]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[137]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[138]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[139]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[140]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[141]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[142]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[143]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[144]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[145]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[146]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[147]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[148]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[149]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[150]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[151]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[152]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[153]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[154]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[155]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[156]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[157]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[158]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[159]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[160]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[161]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[162]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[163]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[164]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[165]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[166]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[167]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[168]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[169]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[170]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[171]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[172]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[173]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[174]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[175]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[176]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[177]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[178]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[179]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[180]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[181]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[182]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[183]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[184]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[185]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[186]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[187]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[188]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[189]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[190]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[191]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[192]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[193]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[194]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[195]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[196]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[197]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[198]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[199]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[200]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[201]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[202]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[203]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[204]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[205]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[206]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[207]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[208]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[209]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[210]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[211]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[212]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[213]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[214]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[215]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[216]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[217]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[218]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[219]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[220]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[221]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[222]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[223]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[224]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: permSupport == perm 4D permutation not support
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[225]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[226]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[227]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[228]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[229]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[230]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[231]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[232]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[233]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[234]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[235]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[236]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[237]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[238]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[239]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[240]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[241]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[242]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[243]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[244]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[245]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[246]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[247]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[248]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[249]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[250]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[251]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[252]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[253]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[254]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[255]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[256]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[257]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[258]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[259]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[260]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[261]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[262]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[263]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[264]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[265]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[266]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[267]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[268]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[269]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[270]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[271]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[272]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[273]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[274]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[275]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[276]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[277]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[278]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[279]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[280]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[281]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[282]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[283]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[284]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[285]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[286]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[287]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[288]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[289]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[290]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[291]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[292]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[293]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[294]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[295]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[296]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[297]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[298]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[299]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[300]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[301]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[302]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[303]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[304]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[305]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[306]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[307]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[308]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[309]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[310]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[311]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[312]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[313]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[314]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[315]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[316]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[317]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[318]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[319]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[320]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[321]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[322]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[323]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[324]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[325]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[326]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[327]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[328]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[329]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[330]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[331]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[332]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[333]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[334]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[335]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[336]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[337]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[338]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[339]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[340]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[341]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[342]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[343]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[344]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[345]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[346]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[347]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[348]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[349]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[350]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[351]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[352]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[353]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[354]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[355]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[356]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[357]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[358]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[359]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[360]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[361]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[362]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[363]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[364]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[365]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[366]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[367]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[368]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[369]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[370]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[371]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[372]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[373]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[374]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[375]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[376]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[377]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[378]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[379]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[380]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[381]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[382]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[383]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[384]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[385]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[386]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[387]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[388]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[389]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[390]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[391]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[392]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[393]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[394]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[395]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[396]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[397]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[398]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[399]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[400]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[401]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[402]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[403]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[404]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[405]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[406]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[407]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[408]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[409]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[410]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[411]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[412]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[413]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[414]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[415]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[416]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[417]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[418]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[419]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[420]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[421]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[422]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[423]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[424]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[425]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[426]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[427]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[428]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[429]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[430]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[431]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[432]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[433]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[434]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[435]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[436]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[437]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[438]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[439]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[440]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[441]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[442]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[443]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[444]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[445]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[446]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[447]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[448]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[449]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[450]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[451]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[452]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[453]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[454]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[455]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[456]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[457]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[458]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[459]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[460]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[461]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[462]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[463]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[464]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[465]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[466]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[467]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[468]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[469]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[470]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[471]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[472]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[473]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[474]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[475]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[476]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[477]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[478]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[479]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[480]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[481]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[482]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[483]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[484]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[485]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[486]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[487]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[488]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[489]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[490]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[491]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[492]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[493]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[494]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[495]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[496]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[497]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[498]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[499]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[500]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[501]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[502]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[503]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[504]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[505]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[506]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[507]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[508]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[509]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[510]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[511]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[512]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[513]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[514]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[515]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[516]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[517]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[518]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[519]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[520]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[521]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[522]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[523]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[524]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[525]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[526]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[527]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[528]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[529]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[530]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[531]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[532]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[533]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: permSupport == perm 4D permutation not support
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[534]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[535]: TRANSPOSE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: false Transpose is not supported
+ ├ EDMA: elemSize == 1 || elemSize == 2 support 8 or 16 bits only
+OP[536]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[537]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[538]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[539]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[540]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[541]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[542]: CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[543]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[544]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[545]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[546]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[547]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[548]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[549]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[550]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[551]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[552]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[553]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[554]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[555]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[556]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[557]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[558]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[559]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[560]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[561]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[562]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[563]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[564]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[565]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[566]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[567]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[568]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[569]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[570]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[571]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[572]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[573]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[574]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[575]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[576]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[577]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[578]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[579]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[580]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[581]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[582]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[583]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[584]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[585]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[586]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[587]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[588]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[589]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[590]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[591]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[592]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[593]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[594]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[595]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[596]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[597]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[598]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[599]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[600]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[601]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[602]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[603]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[604]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[605]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[606]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[607]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[608]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[609]: DEPTHWISE_CONV_2D
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[610]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[611]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[612]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[613]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[614]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[615]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[616]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[617]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[618]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[619]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[620]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[621]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[622]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[623]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[624]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[625]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[626]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[627]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[628]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[629]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[630]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[631]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[632]: TANH
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[633]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[634]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[635]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[636]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[637]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[638]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[639]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[640]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[641]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[642]: MEAN
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[643]: RESHAPE
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[644]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[645]: SUB
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[646]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[647]: BATCH_MATMUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[648]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[649]: SQRT
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[650]: DIV
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[651]: MUL
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[652]: ADD
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
+OP[653]: FULLY_CONNECTED
+ ├ MDLA: Cannot support Float32 input
+ ├ MDLA: Cannot support Float32 output
+ ├ EDMA: unsupported operation
