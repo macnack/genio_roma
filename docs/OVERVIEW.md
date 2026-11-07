@@ -58,7 +58,7 @@ Rule throughout: no claim of acceleration without proof that the work ran on tha
 | Mali GPU, first version (full rewrites) | FP32 | 317.7 | 602.9 | 82.0 / 83.1 |
 | CPU 8 cores, ORT INT8 (naive MinMax PTQ) | INT8 | 129.2 | 211.4 | 20.9 / 78.4 (collapsed) |
 | CPU 8 cores, ORT FP16 | FP16 | 210.9 | 391.2 | 81.85 / 83.13 |
-| APU MDLA (NeuroPilot 6.2.3), 4 graph changes | FP16 | 56.0 | not run | 82.0 / not run; INT8 blocked (see below) |
+| APU MDLA (NeuroPilot 6.2.3), FP16 | FP16 | 54.8 | 105.0 | 81.95 / 83.13; INT8 blocked (SQRT/EXP op versions) |
 Details and caveats: `reports/cross_device.md`, `gpu_armnn.md`, `apu_neuron.md`, `accuracy.md`, `ops.md`.
 
 ## Repo map

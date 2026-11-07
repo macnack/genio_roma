@@ -1,0 +1,6 @@
+rc=0
+INFO: dlopen libneuronusdk_runtime.mtk.so
+INFO: dlopen libneuronusdk_runtime.mtk.so
+Total inference time = 11000 ms
+Total inference time = 10924 ms
+Total inference time = 10956 ms

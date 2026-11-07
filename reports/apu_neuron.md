@@ -85,3 +85,14 @@ Without 2 the compile crashes; without 3 the output is NaN/garbage while the run
 **INT8 (blocked, verified):** `onnx2tf -oiqt -tb tf_converter` (100 calibration images) produces `full_integer_quant` / `integer_quant` / `dynamic_range_quant` TFLites; `ncc-tflite` 6.2.3 rejects all three with "Fail to create tflite context". `ncc-tflite --show-builtin-ops` (`np6_ncc_builtin_ops.txt`) lists SQRT and EXP only at version 1, while the INT8 model uses SQRT v2 and EXP v2 (all other ops used are within the supported versions). Not tried: replacing SQRT/EXP (e.g. x*RSQRT(x) for the std, a non-exp GELU) so the quantized graph only uses supported op versions. Each would be a further logged graph change, and INT8 accuracy is a separate risk (ORT MinMax PTQ collapsed to 20.9% Top-1 on the CPU, `reports/cross_device.md`).
 
 Not done: A-small on the MDLA, model B, per-op MDLA placement dump, the A-tiny FP16 inf image investigation, throughput with multiple MDLA cores (single-process `-c` only).
+
+### Update: minimal rewrite set (supersedes the A-tiny numbers above)
+Built like the GPU minimal set: `rewrite_matmul_reshape` + `rewrite_mean --broadcast --only nchw_c,gap` + `rewrite_ln_scale` (FP16) + `rewrite_matmul_gemm` -> `onnx2tf` FP16 -> `ncc-tflite --arch=mdla3.0`. Stage LayerNorm means stay native TFLite `MEAN`, so the faulty `FULLY_CONNECTED`->`ADD` pattern never appears and the epsilon fold (`rewrite_eps_bias.py`) is not needed.
+
+| Model | ms/inference (3 x 200 runs) | Top-1 / Top-5 (4000 imgs) | ref Top-1 | agreement | KL | non-finite |
+|---|---|---|---|---|---|---|
+| A-tiny (`mdla_AtM16.*`) | 54.8 | 81.95 / 95.90 | 81.93 | 99.88% | 1.4e-5 | 0 |
+| A-small (`mdla_As16.*`) | 105.0 | 83.13 / 96.18 | 83.13 | 99.90% | 1.4e-5 | 0 |
+| A-tiny, earlier full-mean set + eps fold (`mdla_At16.*`) | 56.0 | 82.03 / 95.78 | 81.93 | 99.18% | - | 1 image |
+
+The earlier variant's lower fidelity and the one inf image are therefore attributable to the extra Gemm-based means, not to the MDLA FP16 path in general (verified only for these two models).

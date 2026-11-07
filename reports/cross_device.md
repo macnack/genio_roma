@@ -17,7 +17,7 @@ Board: Grinn GenioBoard-700 (MT8390: 2x Cortex-A78 = cores 6-7, 6x Cortex-A55 = 
 | CPU all 8 cores, ORT static QDQ INT8 (MinMax, 100 calib imgs) | INT8 | 129.2 (p95 149.9) | 7.7 | 211.4 (p95 212.1) | 4.7 | CPU EP; **accuracy poor: Top-1 20.9% / 78.4%** |
 | CPU all 8 cores, ORT FP16 model | FP16 | 210.9 (p95 216.4) | 4.7 | 391.2 (p95 401.9) | 2.6 | CPU EP; Top-1 81.85 / 83.13 |
 | Arm NN CpuAcc (Neon) | FP32 | 668 | 1.5 | 1149 | 0.9 | CPU backend |
-| Genio APU (MDLA 3.0), NeuroPilot 6.2.3 (`ncc-tflite` + `neuronrt -m hw`), 4 graph changes | FP16 | 56.0 (3 repeats x 200 runs, model-only, no pre/post) | 17.9 | not run | - | compiled with `--arch=mdla3.0` only (any unsupported op fails the compile); APU power-on in `dmesg`; Top-1 82.03% on 4000 imgs, agreement 99.2%, 1/4000 images gives inf logits (FP16 overflow); `reports/apu_neuron.md` |
+| Genio APU (MDLA 3.0), NeuroPilot 6.2.3 (`ncc-tflite` + `neuronrt -m hw`), minimal rewrites + LN rescale + MatMul->Gemm | FP16 | 54.8 (3 x 200 runs, model-only) | 18.2 | 105.0 | 9.5 | compiled for `mdla3.0` only (an unsupported op fails the compile); APU power-on in `dmesg`; Top-1 81.95 / 83.13 on 4000 imgs (ref 81.93 / 83.13), agreement 99.88% / 99.90%, 0 non-finite; `reports/apu_neuron.md` |
 | Genio APU, NeuroPilot 8 / ORT Neuron EP (third-party) | - | not supported | - | not supported | - | NOT USABLE: first `/dev/apusys` ioctl returns EFAULT, then segfault |
 
 - FP32 CPU outputs match the laptop FP32 reference (max abs diff <= 1e-5 on first 10 images), so CPU accuracy equals the FP32 reference (A-tiny 81.9%, A-small 83.1% Top-1 on the 4000-image subset); DX-M1 INT8 is 80.8% / 82.0%.
