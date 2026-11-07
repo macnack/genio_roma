@@ -1,0 +1,4 @@
+vpu user createInstance (5.0): vpu_flo_d2d_ksamplestartInfOpen eara libWarn: Can't open library: libperfctl_vendor.so: cannot open shared object file: No such file or directoryvpu_test(9433)[VpuInit] vpu_flo_d2d_ksample: get vpu handle
+getAlgo name: vpu_flo_d2d_ksamplevpu_test(9433)[_vpu_setup_buf] _vpu_setup_buf: fd: 0x4, vaddr: 0xf3d773460000, size: 65536
+vpu_test(9433)[_vpu_setup_buf] _vpu_setup_buf: fd: 0x5, vaddr: 0xf3d772ee0000, size: 65536
+endInfdestory stream instancevpu_test(9433)[Run] vpu_flo_d2d_ksample: Test Result: PASS
