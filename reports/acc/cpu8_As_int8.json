@@ -1,0 +1,1 @@
+{"onnx": "AS_small_ortint8.onnx", "threads": 8, "n": 4000, "run_ms_mean": 211.43397817178823, "run_ms_p50": 206.34200000495184, "run_ms_p95": 212.075615208596}

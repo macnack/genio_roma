@@ -53,9 +53,11 @@ Rule throughout: no claim of acceleration without proof that the work ran on tha
 | ONNX FP32 (laptop reference) | FP32 | - | - | 81.9 / 83.1 |
 | DX-M1 NPU | INT8 | 40.1 | 65.3 | 80.8 / 82.0 |
 | Genio CPU, 8 cores (ORT) | FP32 | 156.7 | 312.1 | = reference |
-| Mali GPU (Arm NN), minimal rewrites | FP16 | 133.8 | 238.0 | 82.0 / pending |
-| Mali GPU (Arm NN), minimal rewrites | FP32 | 263.9 | 495.0 | pending |
+| Mali GPU (Arm NN), minimal rewrites | FP16 | 133.8 | 239.1 | 82.0 / 83.2 |
+| Mali GPU (Arm NN), minimal rewrites | FP32 | 263.9 | 494.8 | 82.0 / 83.05 |
 | Mali GPU, first version (full rewrites) | FP32 | 317.7 | 602.9 | 82.0 / 83.1 |
+| CPU 8 cores, ORT INT8 (naive MinMax PTQ) | INT8 | 129.2 | 211.4 | 20.9 / 78.4 (collapsed) |
+| CPU 8 cores, ORT FP16 | FP16 | 210.9 | 391.2 | 81.85 / 83.13 |
 | APU | - | not run | not run | VPU path works with NP6; MDLA blocked |
 Details and caveats: `reports/cross_device.md`, `gpu_armnn.md`, `apu_neuron.md`, `accuracy.md`, `ops.md`.
 

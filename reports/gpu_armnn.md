@@ -61,12 +61,19 @@ Effect: **the minimal set is 17% faster** (A-tiny FP32 263.9 ms vs 317.7 ms) bec
 | Config (A-tiny) | ms/img (p95) | Top-1 / Top-5 | cosine vs ONNX FP32 | top-1 agreement |
 |---|---|---|---|---|
 | FP32, full 47-mean rewrite (first version) | 317.7 (318.8) | 81.98 / 95.95 | 0.999994 | 99.85% |
-| FP32, minimal rewrite set | 263.9 (264.5) | 400-image check only: agreement 100%, cos 0.99999 | 0.99999 (400 imgs) | 100% (400 imgs) |
+| FP32, minimal rewrite set | 263.9 (264.5) | 81.98 / 95.95 (4000 imgs) | 0.99999 (400 imgs only) | 99.85% |
 | FP16, full rewrite + variance rescale | 161.2 (162.0) | 82.00 / 95.90 | 0.99966 | 99.38% |
 | **FP16, minimal rewrite set + variance rescale** | **133.8 (134.9)** | **82.00 / 95.83** | 0.99969 | 99.45% |
 | FP16, without the variance rescale | 160.7 | invalid | -0.019 | - |
 FP16 costs ~0.1 points of Top-1 vs FP32 within the +/-1.2 CI and 0.5 points of agreement; logit KL 6e-4 vs 6e-6 for FP32. FP16 + minimal set is faster than ORT FP32 on all 8 CPU cores (156.7 ms) and about 3.3x slower than the DX-M1 (40.1 ms, INT8).
-A-small and model B were not re-run with these changes.
+A-small, minimal rewrite set (4000 images, `reports/acc/gpuMin_As.*`, `gpu16m_As.*`; ref 83.1 Top-1):
+
+| Config (A-small) | ms/img (p95) | Top-1 / Top-5 | top-1 agreement | logit KL |
+|---|---|---|---|---|
+| FP32, minimal | 494.8 (495.4) | 83.05 / 96.18 | 99.85% | 7.7e-6 |
+| FP16, minimal + variance rescale | 239.1 (239.5) | 83.23 / 96.18 | 99.50% | 4.4e-4 |
+
+A-tiny FP32 minimal: KL 6.1e-6 (4000 images). All differences are within the +/-1.2 pt CI. The FP16 rescale factors for A-small come from 16 images (see above). Model B was not run.
 
 ## Not usable / not done
 - Model B (DINOv3) not run on GPU.
