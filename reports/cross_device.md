@@ -29,3 +29,23 @@ Board: Grinn GenioBoard-700 (MT8390: 2x Cortex-A78 = cores 6-7, 6x Cortex-A55 = 
 - GPU accuracy (4000 images, vs FP32 ONNX): A-tiny 81.98% Top-1 (ref 81.93), A-small 83.05% (ref 83.13); within the +/-1.2 pt CI. Differences come from the tanh-approximated GELU.
 - GPU is 2x slower than all-core ORT CPU (157/312 ms) and ~8x slower than the DX-M1 single request; Arm NN FP16 on GPU was invalid because of an FP16 overflow in two LayerNorm variances; with a power-of-two rescale it is valid and the fastest non-DX-M1 target (133.8 ms, tiny), see `reports/gpu_armnn.md`.
 - APU: an ORT Neuron EP session that lists the provider is not evidence of APU use (an FP16 model ran 615/615 nodes on CPU). Hypothesis: wrong package generation (NeuroPilot 8 from a third-party PPA vs MediaTek's NeuroPilot 6 for Genio 700, jammy-only) and/or userspace/kernel ABI mismatch with Grinn kernel 6.8.0-9003-mtk; untested, see `reports/apu_neuron.md`.
+
+## Model B: DINOv3 ConvNeXt-Tiny (768-d pooled feature, no classifier head)
+
+Same board, 4000-image eval subset, batch 1. Quality = cosine of the 768-d output vs the FP32 ONNX output on the laptop (mean / min over 4000 images); there is no Top-1 for B. Raw: `reports/acc/B13_*`, `gpuB_*`, `mdlaB*`.
+
+| Target | Precision | ms/img | Cosine mean / min | Verified executed there |
+|---|---|---|---|---|
+| DX-M1 NPU, default PTQ (ema, 100 calib) | INT8 | 40.1 (NPU 35.3) | 0.734 / 0.314 | `dxparse`: 1 NPU group, 0 CPU |
+| DX-M1 NPU, `--quant_diagnosis` + resume `--recalibration_method iqr` | INT8 | 40.1 | **0.914 / 0.681** | same |
+| Mali-G57 GPU, Arm NN GpuAcc, minimal rewrites | FP32 | 258.2 (p95 259.8) | 0.99999 / 0.99996 | Arm NN GpuAcc,CpuAcc |
+| Mali-G57 GPU, Arm NN | FP16 | 130.2 (p95 130.7) | 0.9998 / 0.9988 | same |
+| Genio APU MDLA 3.0, NeuroPilot 6.2.3 | FP16 | 55.0 (3 x 200 runs, 11000 ms each) | 0.99993 / 0.9989 over 3999 finite outputs; **1 of 4000 outputs non-finite** (image 3574) | `neuronrt -m hw` on DLA compiled with `--arch=mdla3.0` |
+| CPU (ORT/Arm NN) | - | not measured for B | - | - |
+
+Facts and caveats
+- **DX-M1 fidelity is the weak point for B-tiny.** INT8 on the NPU is the fastest target (40 ms), but its best feature cosine is 0.914 vs 0.9999 for the FP16 APU/GPU, so the APU at 55 ms is the better accuracy/latency choice for B-tiny. Cause (from `dxcom --quant_diagnosis`): activation quantisation (activation-only cosine 0.951, weight-only 0.999).
+- Build changes needed beyond A, each value-identical (ORT parity checked, `scripts/`): `rewrite_static_reshape.py` (computed Reshape targets -> constants; otherwise onnx2tf emits SELECT and Arm NN rejects it), `rewrite_gather_slice.py` (final Gather of token 0 -> Slice+Reshape; ncc-tflite "Cannot find an execution plan" on the Gather, found by bisect), `rewrite_ln_scale.py --lo 1.0 --fold` (B's early LayerNorm variances are ~1e-4, which FP16/MDLA could not represent: output all Inf; power-of-two up-scaling of the centred values with eps*c^2, no un-scale constant, since 2^-2k is FP16-subnormal and was flushed to 0 by MDLA).
+- Rescale factors come from `act_range` on 16 images; one of 4000 images still produced a non-finite MDLA output. Its largest FP32 tensor (1.6e3) is far below 65504, so the cause is **unknown** (not the known variance overflow).
+- GPU numbers use the same Arm NN path as A; the GPU FP16 needed no extra rescale beyond the one downsample LayerNorm.
+- DX-M1 builds: more calibration images did not help (fresh iqr/1000 via the Python API gave 0.683); `calibration_method`/`calibration_num` in `config.json` are ignored by the 2.4.1 CLI (see `docs/deepx/compiler.md`).

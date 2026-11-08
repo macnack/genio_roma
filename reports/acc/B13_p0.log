@@ -1,0 +1,3 @@
+inputs [{'name': 'input', 'shape': [1, 224, 224, 3], 'dtype': <class 'numpy.uint8'>, 'elem_size': 1}]
+outputs [{'name': 'output', 'shape': [1, 768], 'dtype': <class 'numpy.float32'>, 'elem_size': 4}]
+{'model': 'B_p0.dxnn', 'n': 4000, 'out_shape': [4000, 768], 'wall_s': 169.76480197906494, 'wall_ms_per_img': 42.441200494766235, 'latency_us_mean': 40070.542, 'latency_us_p95': 40401.0, 'npu_us_mean': 35313.59975}

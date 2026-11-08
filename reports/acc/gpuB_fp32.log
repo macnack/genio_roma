@@ -1,0 +1,24 @@
+Your ArmNN library instance does not support Onnx models parser functionality.  Skipped IOnnxParser import.
+Your ArmNN library instance does not have ArmNN model (.armnn) parser functionality.  Skipped IDeserializer import.
+WARNING: PyArmNN is deprecated. To use ArmNN on python, please use the tflite delegate. Expected to be removed in release 24.05.
+0 0s
+200 53s
+400 105s
+600 157s
+800 209s
+1000 262s
+1200 314s
+1400 366s
+1600 419s
+1800 471s
+2000 525s
+2200 579s
+2400 633s
+2600 687s
+2800 741s
+3000 795s
+3200 849s
+3400 902s
+3600 956s
+3800 1009s
+{'model': 'Bt_sr_fp32.tflite', 'backends': 'GpuAcc,CpuAcc', 'fp16': False, 'n': 4000, 'wall_s': 1063.0007486343384, 'run_ms_mean': 258.2191377227573, 'run_ms_p50': 258.02500000281725, 'run_ms_p95': 259.79172370862216}
