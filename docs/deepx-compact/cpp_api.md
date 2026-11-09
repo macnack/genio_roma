@@ -73,6 +73,25 @@ Async + Wait. [RT: docs/source/docs/04_Model_Inference.md#L169-L172]
 auto jobId = ie.RunAsync(inputBuf.data());
 auto outputs = ie.Wait(jobId);
 ```
+Async + callback. [RT: examples/cpp/run_async_model.cpp#L66-L94]
+```cpp
+dxrt::InferenceEngine ie(model_path);
+ie.RegisterCallback([&callback_count, &loop_count, &cv_mutex, &cv]
+    (const dxrt::TensorPtrs &outputs, const void *userArg) {
+    std::ignore = outputs;
+    std::ignore = userArg;
+    std::unique_lock<std::mutex> lock(cv_mutex);
+    callback_count++;
+    if ( callback_count == loop_count ) cv.notify_one();
+    return 0;
+});
+std::vector<uint8_t> inputPtr(ie.GetInputSize(), 0);
+for (int i = 0; i < loop_count; ++i)
+{
+    auto* userData = new std::pair<int, int>(i, loop_count);
+    ie.RunAsync(inputPtr.data(), userData);
+}
+```
 Device/core binding. [RT: docs/source/docs/09_01_C++_Tutorials.md#L584-L597]
 ```cpp
 dxrt::InferenceOption op;
@@ -80,6 +99,16 @@ op.devices.push_back(0);
 op.boundOption = dxrt::InferenceOption::BOUND_OPTION::NPU_0;
 op.useORT = false;
 dxrt::InferenceEngine ie(modelPath, op);
+```
+Batch. [RT: docs/source/docs/09_01_C++_Tutorials.md#L461-L487]
+```cpp
+dxrt::InferenceEngine ie(modelPath);
+std::vector<uint8_t> inputBuffer(ie.GetInputSize(), 0);
+std::vector<void*> inputBuffers;
+for(int i = 0; i < batch_count; ++i) inputBuffers.emplace_back(inputBuffer.data());
+std::vector<void*> output_buffers(batch_count, 0);
+for(auto& ptr : output_buffers) ptr = new uint8_t[ie.GetOutputSize()];
+auto outputPtrs = ie.Run(inputBuffers, output_buffers);
 ```
 
 ## Experimentally verified facts

@@ -2,42 +2,40 @@
 
 > Compact of docs/deepx/README.md. Full text and citations are in the source docs.
 
-DEEPX DX-M1 NPU toolchain (PyTorch -> ONNX -> DX-COM -> DXNN -> DX-RT), for the ConvNeXt-Tiny pipeline. Read [CONVENTIONS.md](CONVENTIONS.md) first (claim classes, citation format, pinned sources).
+DEEPX DX-M1 NPU toolchain (PyTorch -> ONNX -> DX-COM -> DXNN -> DX-RT), for the ConvNeXt-Tiny pipeline. Every doc separates officially documented, experimentally verified and hypothesised claims. Read [CONVENTIONS.md](CONVENTIONS.md) first.
 
 Read order: architecture, installation, onnx_compatibility, compiler, calibration, quantization, runtime, python_api, performance_optimization, troubleshooting, tricks_and_best_practices.
 
-Pinned sources (2026-11-05): dx-all-suite v2.5.0, dx-compiler v2.5.0, dx-runtime v2.5.0, DX-RT v3.5.0, dx_app v3.3.0, driver v2.7.0, firmware v2.7.6.
+## Officially documented facts
 
-## Files
+Index only; claims live in the linked docs with their own citations. Pinned sources are in [CONVENTIONS.md](CONVENTIONS.md) (dx-all-suite v2.5.0, dx-compiler v2.5.0, dx-runtime v2.5.0, DX-RT v3.5.0, dx_app v3.3.0, driver v2.7.0, firmware v2.7.6).
 
-| File | Scope |
+| Doc | Scope |
 |---|---|
-| [CONVENTIONS.md](CONVENTIONS.md) | Claim classes, citation format, pinned commits, hard rules |
-| [architecture.md](architecture.md) | Toolchain components and how they fit |
-| [installation.md](installation.md) | Documented install steps and their system impact |
+| [CONVENTIONS.md](CONVENTIONS.md) | Claim classes, citation format, pinned source commits, hard rules |
+| [architecture.md](architecture.md) | DX-M1 toolchain architecture and how the components fit together |
+| [installation.md](installation.md) | Documented install steps with their system impact |
 | [hardware.md](hardware.md) | DX-M1 hardware facts |
-| [version_compatibility.md](version_compatibility.md) | Compatibility matrix: DX-COM, DX-RT, driver, firmware, dx_app |
+| [version_compatibility.md](version_compatibility.md) | Version compatibility matrix across DX-COM, DX-RT, driver, firmware, dx_app |
 | [onnx_compatibility.md](onnx_compatibility.md) | ONNX opsets/operators accepted by DX-COM |
-| [compiler.md](compiler.md) | DX-COM pipeline, CLI, Python API |
+| [compiler.md](compiler.md) | DX-COM compiler pipeline, CLI and Python API |
 | [calibration.md](calibration.md) | Calibration data, loaders, preprocessing |
 | [quantization.md](quantization.md) | INT8 quantization methods and tuning |
-| [runtime.md](runtime.md) | DX-RT runtime, CLI tools, tensors, scheduling |
+| [runtime.md](runtime.md) | DX-RT runtime: architecture, CLI tools, tensors, scheduling |
 | [python_api.md](python_api.md) | DX-RT Python API (`dx_engine`) |
 | [cpp_api.md](cpp_api.md) | DX-RT C++ API |
-| [performance_optimization.md](performance_optimization.md) | Profiling, benchmarking, tuning |
-| [troubleshooting.md](troubleshooting.md) | Errors, symptoms, fixes |
-| [tricks_and_best_practices.md](tricks_and_best_practices.md) | Tips and pitfalls by stage |
-| [agent_dev.md](agent_dev.md) | Official dx-agent-dev (`.deepx/`) agent/skill system and reuse plan |
-| [board_discovery.md](board_discovery.md) | Board discovery notes |
+| [performance_optimization.md](performance_optimization.md) | Profiling, benchmarking and performance tuning |
+| [troubleshooting.md](troubleshooting.md) | Errors, symptoms and fixes (written by another author; link may not exist yet) |
+| [tricks_and_best_practices.md](tricks_and_best_practices.md) | Tips and pitfalls grouped by export, compile, calibration, runtime, performance, debugging |
+| [agent_dev.md](agent_dev.md) | Official dx-agent-dev (`.deepx/`) agent/skill system, adapters, and reuse plan for our pipeline |
 
 Web entry point: [developer.deepx.ai/tech-docs/, fetched 2026-11-05].
 
 ## Experimentally verified facts
 
-Board-side results now exist; the DX-M1 is on the Genio-700 board (adb), not on the laptop. See `board_discovery.md` and `reports/` (ops, accuracy, cross_device, apu_neuron, gpu_armnn).
+Board-side results exist; the DX-M1 is on the Genio-700 board (adb), not on the laptop. See `board_discovery.md`, `board_summary.md` and `reports/` (ops, accuracy, cross_device, apu_neuron, gpu_armnn).
 
 ## Hypotheses needing validation
 
-- All 18 files of the set are now present in this directory (CONVENTIONS.md copied unchanged; board_discovery.md was not in the source index).
-- Contradiction: the verified-facts line above says no DX-M1 is available, but `board_discovery.md` (Phase 3, 2026-11-05) records a DX-M1 (`/dev/dxrt0`, RT 3.4.2) on the board. The verified-facts line predates that run; update it.
-- Docs were written independently from pinned sources; cross-doc contradictions (e.g. `quantization_device`, DX-RT CLI tool names) are flagged inside the individual docs. A consistency pass would settle the rest.
+- Set completeness: `troubleshooting.md` was missing when this index was written; re-list `docs/deepx/` and fix links once all files exist.
+- Docs were written independently from sources pinned 2026-11-05; cross-doc contradictions (e.g. `quantization_device`, DX-RT CLI tool names) are flagged inside the individual docs, see "Hypotheses" in [tricks_and_best_practices.md](tricks_and_best_practices.md). A consistency pass would settle the rest.
