@@ -38,6 +38,7 @@ Same board, 4000-image eval subset, batch 1. Quality = cosine of the 768-d outpu
 |---|---|---|---|---|
 | DX-M1 NPU, default PTQ (ema, 100 calib) | INT8 | 40.1 (NPU 35.3) | 0.734 / 0.314 | `dxparse`: 1 NPU group, 0 CPU |
 | DX-M1 NPU, `--quant_diagnosis` then `--checkpoint` resume (`--recalibration_method` has no effect) | INT8 | 40.1 | **0.914 / 0.681** | same |
+| DX-M1 NPU, Q-Pro (`use_q_pro`, API, 100 calib, built in ~2.5 h) | INT8 | 40.0 | 0.569 / 0.002 | same |
 | Mali-G57 GPU, Arm NN GpuAcc, minimal rewrites | FP32 | 258.2 (p95 259.8) | 0.99999 / 0.99996 | Arm NN GpuAcc,CpuAcc |
 | Mali-G57 GPU, Arm NN | FP16 | 130.2 (p95 130.7) | 0.9998 / 0.9988 | same |
 | Genio APU MDLA 3.0, NeuroPilot 6.2.3 | FP16 | 55.0 (3 x 200 runs, 11000 ms each) | 0.99993 / 0.9989 over 3999 finite outputs; **1 of 4000 outputs non-finite** (image 3574) | `neuronrt -m hw` on DLA compiled with `--arch=mdla3.0` |
