@@ -61,6 +61,19 @@ Rule throughout: no claim of acceleration without proof that the work ran on tha
 | APU MDLA (NeuroPilot 6.2.3), FP16 | FP16 | 54.8 | 105.0 | 81.95 / 83.13; INT8 blocked (SQRT/EXP op versions) |
 Details and caveats: `reports/cross_device.md`, `gpu_armnn.md`, `apu_neuron.md`, `accuracy.md`, `ops.md`.
 
+## Model B (DINOv3 ConvNeXt-Tiny, 768-d feature; cosine vs FP32 ONNX, 4000 images)
+| Target | Precision | ms | Cosine mean / min |
+|---|---|---|---|
+| DX-M1, default PTQ | INT8 | 40.1 | 0.734 / 0.314 |
+| DX-M1, `--quant_diagnosis` + `--checkpoint` resume (best) | INT8 | 40.1 | 0.914 / 0.681 |
+| DX-M1, Q-Pro | INT8 | 40.0 | 0.569 / 0.002 |
+| APU MDLA | FP16 | 55.0 | 0.99993 / 0.9989 (1 of 4000 outputs non-finite, cause unknown) |
+| Mali GPU | FP16 / FP32 | 130.2 / 258.2 | 0.9998 / 0.99999 |
+| CPU 8 cores | FP32 | 170.1 | = reference |
+- B-tiny's DX-M1 fidelity is the open problem (activation-quantisation dominated). The APU is the better accuracy/latency choice for B-tiny.
+- B needs extra value-identical rewrites: static Reshape targets, Gather->Slice+Reshape, LayerNorm variance up-scaling (`--lo --fold`).
+- DX-COM 2.4.1: `calibration_method`/`calibration_num` in `config.json` are ignored by the CLI; `--recalibration_method` is a no-op (ema/minmax/iqr resumes are md5-identical). Earlier A minmax/calibration comparisons compared identical builds. The resume path itself changes the result (B up, A-tiny 80.8 -> 80.0% Top-1); cause unknown. See `docs/deepx/compiler.md`.
+
 ## Repo map
 - `docs/deepx/`, `docs/deepx-compact/`, `docs/genio/`, `grinn-genio-700-sbc-docs/`: documentation (see `CLAUDE.md`).
 - `scripts/`: export, graph inspection, rewrites, quantization, board eval/bench, bisect and ablation harnesses.
