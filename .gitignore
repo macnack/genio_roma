@@ -10,3 +10,7 @@ data/
 __pycache__/
 # nested clone, pinned in third_party/README.md
 third_party/ConvNeXt/
+
+# Generated outputs (added 2026-11-09): compiled/exported models and measurement reports
+models/
+reports/
