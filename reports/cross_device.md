@@ -41,13 +41,31 @@ Same board, 4000-image eval subset, batch 1. Quality = cosine of the 768-d outpu
 | DX-M1 NPU, Q-Pro (`use_q_pro`, API, 100 calib, built in ~2.5 h) | INT8 | 40.0 | 0.569 / 0.002 | same |
 | Mali-G57 GPU, Arm NN GpuAcc, minimal rewrites | FP32 | 258.2 (p95 259.8) | 0.99999 / 0.99996 | Arm NN GpuAcc,CpuAcc |
 | Mali-G57 GPU, Arm NN | FP16 | 130.2 (p95 130.7) | 0.9998 / 0.9988 | same |
-| Genio APU MDLA 3.0, NeuroPilot 6.2.3 | FP16 | 55.0 (3 x 200 runs, 11000 ms each) | 0.99993 / 0.9989 over 3999 finite outputs; **1 of 4000 outputs non-finite** (image 3574) | `neuronrt -m hw` on DLA compiled with `--arch=mdla3.0` |
+| Genio APU MDLA 3.0, NeuroPilot 6.2.3, LayerNorm scaling `--lo 1.0` (first build) | FP16 | 55.0 (3 x 200 runs) | 0.99993 / 0.9989 over 3999 finite outputs; **1 of 4000 non-finite** (image 3574) | `neuronrt -m hw` on DLA compiled with `--arch=mdla3.0` |
+| Genio APU MDLA 3.0, LayerNorm scaling `--lo 1000` (final build) | FP16 | 55.0 / 55.0 / 55.7 (3 x 200 runs) | **0.99997 / 0.9990, 0 of 4000 non-finite** | same |
 | CPU 8 cores, ORT 1.31.1 | FP32 | 170.1 (p95 177.4, 400-image re-run) | 1.0 / 1.0 (= reference, max abs diff 2.8e-5) | CPU EP |
 
 Facts and caveats
 - **DX-M1 fidelity is the weak point for B-tiny.** INT8 on the NPU is the fastest target (40 ms), but its best feature cosine is 0.914 vs 0.9999 for the FP16 APU/GPU, so the APU at 55 ms is the better accuracy/latency choice for B-tiny. Cause (from `dxcom --quant_diagnosis`): activation quantisation (activation-only cosine 0.951, weight-only 0.999).
 - Build changes needed beyond A, each value-identical (ORT parity checked, `scripts/`): `rewrite_static_reshape.py` (computed Reshape targets -> constants; otherwise onnx2tf emits SELECT and Arm NN rejects it), `rewrite_gather_slice.py` (final Gather of token 0 -> Slice+Reshape; ncc-tflite "Cannot find an execution plan" on the Gather, found by bisect), `rewrite_ln_scale.py --lo 1.0 --fold` (B's early LayerNorm variances are ~1e-4, which FP16/MDLA could not represent: output all Inf; power-of-two up-scaling of the centred values with eps*c^2, no un-scale constant, since 2^-2k is FP16-subnormal and was flushed to 0 by MDLA).
-- Rescale factors come from `act_range` on 16 images; one of 4000 images still produced a non-finite MDLA output. Its largest FP32 tensor (1.6e3) is far below 65504, so the cause is **unknown** (not the known variance overflow).
+- The first B-tiny MDLA build left 1 of 4000 outputs non-finite (image 3574; its largest FP32 tensor, 1.6e3, is far below 65504). The B-small build with the same scaling failed on 13 of 16 smoke-test images (all Inf; bisect: inside `stages.3/layers.2/layer_norm`, variance ~2.7e-3, eps 1e-6). Hypothesis (consistent with the result, not proven): in FP16 eps is a subnormal that MDLA may flush to zero, so a token with near-zero variance divides by zero. Fix: scale EVERY LayerNorm (`rewrite_ln_scale.py --lo 1000 --fold`, i.e. eps becomes eps*c^2, which is FP16-normal). Result: B-small 16/16 then 4000/4000 finite, B-tiny 4000/4000 finite (image 3574 now cosine 0.99993). Scale factors still come from `act_range` on 16 images.
 - CPU FP32 timing: the 4000-image run was noisy (mean 261, p50 205, p95 396 ms; cause unknown), a quiet 400-image re-run gave 170.1 ms; the table uses the re-run. Outputs of the 4000 run equal the FP32 reference.
 - GPU numbers use the same Arm NN path as A; the GPU FP16 needed no extra rescale beyond the one downsample LayerNorm.
 - DX-M1 builds: more calibration images did not help (API iqr/1000 gave 0.683); `calibration_method`/`calibration_num` in `config.json` are ignored by the 2.4.1 CLI, and `--recalibration_method` is a no-op (ema/minmax/iqr resumes are md5-identical). The 0.914 comes from the resume path, but calibration-subset luck is not excluded: 5 random 100-image subsets give B-tiny cosine 0.792-0.909 (default build 0.734, resume 0.914) and A-tiny Top-1 80.73-81.25% with logit cosine 0.811-0.939 (`reports/calibration_sensitivity.md`). See `docs/deepx/compiler.md`.
+
+
+## Model B-small: DINOv3 ConvNeXt-Small (768-d pooled feature)
+
+Same protocol (4000 images, batch 1, cosine of the 768-d output vs FP32 ONNX). Reference `reports/acc/BS13_fp32_out.npy`. Raw: `reports/acc/gpuBs_*`, `mdlaBs*`, `cpuBs_t.json`.
+
+| Target | Precision | ms/img | Cosine mean / min | Verified executed there |
+|---|---|---|---|---|
+| DX-M1 NPU, default PTQ (earlier build) | INT8 | 65.3 | 0.984 (mean) | `dxparse`: 1 NPU group, 0 CPU |
+| Mali-G57 GPU, Arm NN GpuAcc | FP32 | 490.0 (p95 490.7) | 0.99999 / 0.99993 | GpuAcc,CpuAcc |
+| Mali-G57 GPU, Arm NN | FP16 | 235.6 (p95 236.0) | 0.99988 / 0.99862 | same |
+| Genio APU MDLA 3.0, NeuroPilot 6.2.3 (`--lo 1000` scaling) | FP16 | 105.4 / 106.0 / 106.0 (3 x 200 runs) | 0.99997 / 0.9985, 0 of 4000 non-finite | `neuronrt -m hw` on DLA compiled `--arch=mdla3.0` |
+| CPU 8 cores, ORT 1.31.1 | FP32 | 375.9 (p95 391.8, 400-image quiet run) | = reference on the 400 images run (cosine >= 0.9999999) | CPU EP |
+
+- The DX-M1 row is the earlier default-PTQ build (not re-timed or re-built in this round; calibration choice affects B-tiny fidelity strongly, see `calibration_sensitivity.md`, B-small was not swept).
+- Same rewrites as B-tiny (static Reshape targets, MatMul->Gemm, Gather->Slice+Reshape, LayerNorm scaling). B-small needed the all-LayerNorm scaling from the start; with only the layers selected by `--lo 1.0` 13 of 16 outputs were Inf.
+- ms are model-only. CPU outputs were compared only on the 400 images of the timing run.

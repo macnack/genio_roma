@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """EXPERIMENT (FP16 overflow test): LayerNorm variance rescale. For each Pow(x-mean, 2) whose measured max exceeds --thresh
 (from act_range.py json), replace var = mean(d^2) by var = mean((d*c)^2) * (1/c^2), c = 2^-k, k = ceil(log2(max|d|/64)).
-Mathematically identical in exact arithmetic; keeps d^2 below the FP16 max (65504). usage: rewrite_ln_scale.py in.onnx out.onnx ranges.json [--thresh 2e4] [--lo 1.0] [--fold]"""
+Mathematically identical in exact arithmetic; keeps d^2 below the FP16 max (65504). usage: rewrite_ln_scale.py in.onnx out.onnx ranges.json [--thresh 2e4] [--lo 1.0] [--fold]
+--lo 1000 --fold scales every LayerNorm (needed on MDLA: B-small gave Inf with --lo 1.0; hypothesis: FP16 eps is subnormal and flushed to 0)."""
 import sys, json, math, numpy as np, onnx
 from onnx import helper as h, numpy_helper as nh
 src, dst, rj = sys.argv[1:4]; thr = float(sys.argv[sys.argv.index("--thresh") + 1]) if "--thresh" in sys.argv else 2e4

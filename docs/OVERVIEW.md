@@ -67,11 +67,19 @@ Details and caveats: `reports/cross_device.md`, `gpu_armnn.md`, `apu_neuron.md`,
 | DX-M1, default PTQ | INT8 | 40.1 | 0.734 / 0.314 |
 | DX-M1, `--quant_diagnosis` + `--checkpoint` resume (best) | INT8 | 40.1 | 0.914 / 0.681 |
 | DX-M1, Q-Pro | INT8 | 40.0 | 0.569 / 0.002 |
-| APU MDLA | FP16 | 55.0 | 0.99993 / 0.9989 (1 of 4000 outputs non-finite, cause unknown) |
+| APU MDLA (LayerNorm scaling `--lo 1000`) | FP16 | 55.0 | 0.99997 / 0.9990, 0 of 4000 non-finite (first build: 1 of 4000 non-finite) |
 | Mali GPU | FP16 / FP32 | 130.2 / 258.2 | 0.9998 / 0.99999 |
 | CPU 8 cores | FP32 | 170.1 | = reference |
 - B-tiny's DX-M1 fidelity is the open problem (activation-quantisation dominated). The APU is the better accuracy/latency choice for B-tiny.
-- B needs extra value-identical rewrites: static Reshape targets, Gather->Slice+Reshape, LayerNorm variance up-scaling (`--lo --fold`).
+- B needs extra value-identical rewrites: static Reshape targets, Gather->Slice+Reshape, and scaling of every LayerNorm (`rewrite_ln_scale.py --lo 1000 --fold`; hypothesis: FP16 eps flushed to zero on MDLA).
+
+## Model B-small (768-d feature; cosine vs FP32 ONNX, 4000 images)
+| Target | Precision | ms | Cosine mean / min |
+|---|---|---|---|
+| DX-M1, default PTQ | INT8 | 65.3 | 0.984 |
+| APU MDLA | FP16 | 105.8 | 0.99997 / 0.9985 (0 of 4000 non-finite) |
+| Mali GPU | FP16 / FP32 | 235.6 / 490.0 | 0.99988 / 0.99999 |
+| CPU 8 cores | FP32 | 375.9 | = reference (400 images) |
 - DX-COM 2.4.1: `calibration_method`/`calibration_num` in `config.json` are ignored by the CLI; `--recalibration_method` is a no-op (ema/minmax/iqr resumes are md5-identical). Earlier A minmax/calibration comparisons compared identical builds. The resume path changes the result (B up, A-tiny 80.8 -> 80.0% Top-1), but calibration-subset choice alone moves B-tiny cosine 0.792-0.909 across 5 random 100-image subsets (A-tiny Top-1 only 80.73-81.25%, logit cosine 0.811-0.939), so the resume gain is not distinguishable from subset luck (`reports/calibration_sensitivity.md`). See `docs/deepx/compiler.md`.
 
 ## Repo map
