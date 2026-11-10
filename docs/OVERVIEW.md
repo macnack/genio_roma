@@ -66,6 +66,7 @@ Details and caveats: `reports/cross_device.md`, `gpu_armnn.md`, `apu_neuron.md`,
 |---|---|---|---|
 | DX-M1, default PTQ | INT8 | 40.1 | 0.734 / 0.314 |
 | DX-M1, `--quant_diagnosis` + `--checkpoint` resume (best) | INT8 | 40.1 | 0.914 / 0.681 |
+| DX-M1, API ema, 500 calibration images (held-out-split `src` half) | INT8 | 40.1 | **0.9235 / 0.700** |
 | DX-M1, Q-Pro | INT8 | 40.0 | 0.569 / 0.002 |
 | APU MDLA (LayerNorm scaling `--lo 1000`) | FP16 | 55.0 | 0.99997 / 0.9990, 0 of 4000 non-finite (first build: 1 of 4000 non-finite) |
 | Mali GPU | FP16 / FP32 | 130.2 / 258.2 | 0.9998 / 0.99999 |

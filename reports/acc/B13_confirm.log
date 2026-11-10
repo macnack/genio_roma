@@ -1,0 +1,4 @@
+{'model': 'cal.dxnn', 'n': 4000, 'out_shape': [4000, 768], 'wall_s': 168.9836142063141, 'wall_ms_per_img': 42.2459035515
+B13_sel_s0_n500 cos 0.9235 min 0.7
+{'model': 'cal.dxnn', 'n': 4000, 'out_shape': [4000, 768], 'wall_s': 167.6652352809906, 'wall_ms_per_img': 41.9163088202
+B13_sel_s3_n250 cos 0.9209 min 0.661
