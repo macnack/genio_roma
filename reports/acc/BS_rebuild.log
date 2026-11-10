@@ -1,0 +1,6 @@
+BS13_sel_s3_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 4000, 'out_shape': [4000, 768], 'wall_s': 271.1955494880676, 'wall_ms_per_img': 67.7988873720169, 'latency_us_mean': 65375.47375, 'latency_us_p95': 65713.05, 'npu_us_mean': 
+BS13_sel_s3_n100 cos 0.9743 min 0.861
+BS13_sel_s0_n500 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 4000, 'out_shape': [4000, 768], 'wall_s': 269.99919509887695, 'wall_ms_per_img': 67.49979877471924, 'latency_us_mean': 65227.02775, 'latency_us_p95': 65636.05, 'npu_us_mean'
+BS13_sel_s0_n500 cos 0.9702 min 0.79

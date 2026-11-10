@@ -1,0 +1,9 @@
+Bsel_s3_n20 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.952848434448242, 'wall_ms_per_img': 41.905696868896484, 'latency_us_mean': 39969.756, 'lat
+Bsel_s3_n20 cos 0.8058 min 0.418 md5=485a04eba14e
+Bsel_s3_n250 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.86508870124817, 'wall_ms_per_img': 41.73017740249634, 'latency_us_mean': 39747.168, 'laten
+Bsel_s3_n250 cos 0.9202 min 0.674 md5=4ead4b5c64c4
+Bsel_s0_n500 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 21.150901556015015, 'wall_ms_per_img': 42.30180311203003, 'latency_us_mean': 39999.738, 'late
+Bsel_s0_n500 cos 0.9224 min 0.69 md5=8f94bbd571c7

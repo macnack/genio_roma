@@ -57,6 +57,7 @@ Preprocessing and layout
 
 None yet (no DX-M1 available on host as of 2026-11-05).
 - **Calibration-subset sensitivity (DX-COM 2.4.1, ema, N=100, 5 seeded random subsets of the 1000-image pool, 4000 eval images):** A-tiny Top-1 80.73-81.25% (spread 0.52 pt, inside the +-1.2 pt CI) but logit cosine 0.811-0.939; B-tiny feature cosine 0.792-0.909 (spread 0.117). Same seed twice gives md5-identical `.dxnn` (deterministic). The default build (B 0.734) is below all five subsets and the checkpoint-resume build (B 0.914) above all five, so the earlier resume/iqr gains are not distinguishable from subset luck. The API on the full pool with N=100 reproduces the CLI default byte for byte, but its 100 images are not the first 100 by name; which ones is unknown. (`reports/calibration_sensitivity.md`, `scripts/calib_sweep.sh`)
+- **Held-out subset search and size sweep (B-tiny, 500-image held-out `sel` half, API ema):** N=100 over 10 seeds cosine 0.793-0.914; N=20 0.806; N=250 0.920; N=500 0.922 (one seed per size). The best N=100 subset chosen on `sel` scored 0.915 on the 4000 eval images (default build 0.734). B-small with the same recipe: 0.974 (N=100) and 0.970 (N=500), below its earlier default 0.984. (`reports/calibration_sensitivity.md`, `scripts/calib_sel_sweep.sh`)
 
 ## Hypotheses needing validation
 

@@ -41,6 +41,24 @@ B-tiny (DINOv3, 768-d feature; cosine vs FP32):
 - Verified: the API with the full pool and N=100 reproduces the original CLI default byte for byte (`25f0f95d...`), so the default build used some deterministic 100 images chosen by the loader. Which ones is unknown; it is NOT the first 100 by name (that build differs, `063e8b27...`).
 - The default B-tiny build (0.734) is lower than all five random subsets; the checkpoint-resume build (0.914) is higher than all five. Earlier explanations for the resume gain ("iqr", "resume path") are therefore not distinguishable from calibration-subset luck: the resume path calibrates on a different (99-image) sample. Hypothesis, not verified.
 - Class coverage is not the cause: calibration on only classes 0-99 gave 0.885, better than three of five random subsets.
-- Five seeds is a small sample; the true spread may be wider. Subset size N was not varied (job skipped).
-- No subset was selected on the 4000 eval images. If a "best" subset is wanted for deployment, choose it on a calibration-disjoint validation slice, then report it as a tuned result.
+- Five seeds is a small sample; the true spread may be wider. Subset size was varied only in the follow-up below (one seed per size).
+- No subset in the first 5-seed sweep was selected on the eval images (see the held-out follow-up for the tuned choice).
 - Not explained: why the loader's default pick and the resume path differ from random subsets; why A's Top-1 is stable while its logit cosine swings.
+
+## Follow-up 2026-11-10: held-out subset search and size sweep (B-tiny)
+Method: the 1000-image calib pool is split (seed 123, `scripts/make_calib_split.py`) into `src` (500, calibration source) and `sel` (500, held-out scoring set, never calibrated on, disjoint from the 4000 eval images). Reference: FP32 ONNX on `sel` (`reports/acc/Bsel_fp32_out.npy`). Builds via `scripts/calib_sel_sweep.sh` (API, ema); all builds 1 NPU group, 0 CPU groups.
+
+| Build (subset of `src`) | cosine on `sel` | min |
+|---|---|---|
+| N=100 seeds 0,1,2,6 | 0.793 / 0.826 / 0.803 / 0.793 | 0.38-0.45 |
+| N=100 seeds 4,5 | 0.877 / 0.873 | 0.51 / 0.55 |
+| N=100 seeds 7,8,9 | 0.900 / 0.901 / 0.902 | 0.64-0.72 |
+| N=100 seed 3 (best) | 0.914 | 0.729 |
+| N=20 seed 3 | 0.806 | 0.418 |
+| N=250 seed 3 | 0.920 | 0.674 |
+| N=500 seed 0 (all of `src`) | 0.922 | 0.690 |
+
+- Selected seed 3 on `sel`, then ONE confirmation on the 4000 eval images: cosine 0.9152 (min 0.715) vs 0.734 for the default build. Selection did not overfit (0.914 held-out vs 0.915 eval).
+- Size trend: 20 -> 0.806; 100 -> 0.79-0.91 (10 seeds); 250 -> 0.920; 500 -> 0.922. N>=250 matches the best N=100 seed without selection. One seed per size, so a trend, not a proof; N=250/500 not confirmed on the 4000 images.
+- B-small (4000 eval images, API ema, `scripts/bs_rebuild.sh`): seed 3 N=100 cosine 0.9743 (min 0.861); seed 0 N=500 0.9702 (min 0.790). Both below the earlier default build (0.984): the lever that helps B-tiny does not help B-small. Unknown why.
+- B-tiny stays below the 0.95 bar proposed for the issue (best 0.915 confirmed). Unknown whether larger N than 500 (needs a bigger pool) helps.

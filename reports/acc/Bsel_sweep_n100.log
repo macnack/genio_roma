@@ -1,0 +1,30 @@
+Bsel_s0_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.87781572341919, 'wall_ms_per_img': 41.75563144683838, 'latency_us_mean': 39807.552, 'laten
+Bsel_s0_n100 cos 0.7927 min 0.42 md5=3b81af6b0bd5
+Bsel_s1_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.95485234260559, 'wall_ms_per_img': 41.90970468521118, 'latency_us_mean': 39927.758, 'laten
+Bsel_s1_n100 cos 0.8262 min 0.403 md5=0c07e1a19404
+Bsel_s2_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.91971468925476, 'wall_ms_per_img': 41.83942937850952, 'latency_us_mean': 39902.226, 'laten
+Bsel_s2_n100 cos 0.8027 min 0.378 md5=0a6e02f70662
+Bsel_s3_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 21.052937507629395, 'wall_ms_per_img': 42.10587501525879, 'latency_us_mean': 39962.018, 'late
+Bsel_s3_n100 cos 0.9142 min 0.729 md5=29d67b7c1190
+Bsel_s4_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.987590789794922, 'wall_ms_per_img': 41.975181579589844, 'latency_us_mean': 40056.148, 'lat
+Bsel_s4_n100 cos 0.8773 min 0.507 md5=c9992b56e005
+Bsel_s5_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 21.06527352333069, 'wall_ms_per_img': 42.13054704666138, 'latency_us_mean': 40159.568, 'laten
+Bsel_s5_n100 cos 0.8733 min 0.55 md5=0a93e8eb6093
+Bsel_s6_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 21.10808300971985, 'wall_ms_per_img': 42.2161660194397, 'latency_us_mean': 40276.162, 'latenc
+Bsel_s6_n100 cos 0.7934 min 0.452 md5=8b843ab822d6
+Bsel_s7_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.919143438339233, 'wall_ms_per_img': 41.83828687667847, 'latency_us_mean': 39927.628, 'late
+Bsel_s7_n100 cos 0.8998 min 0.723 md5=4bbda23155c5
+Bsel_s8_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 21.035788774490356, 'wall_ms_per_img': 42.07157754898071, 'latency_us_mean': 39950.634, 'late
+Bsel_s8_n100 cos 0.9014 min 0.643 md5=14d269deec04
+Bsel_s9_n100 Final result: 1 NPU groups, 0 CPU groups
+{'model': 'cal.dxnn', 'n': 500, 'out_shape': [500, 768], 'wall_s': 20.972375631332397, 'wall_ms_per_img': 41.944751262664795, 'latency_us_mean': 39941.052, 'lat
+Bsel_s9_n100 cos 0.9021 min 0.713 md5=301d8cedfad1
