@@ -20,7 +20,7 @@ Rule throughout: no claim of acceleration without proof that the work ran on tha
         | adb push                      onnx2tf -rtpo gelu erf -> .tflite                  | adb push              | adb push
         v                                    | adb push                                   v                       v
    DX-RT 3.4.2 + driver 2.6.0 + FW 2.7.4     v                                       ORT CPUExecutionProvider   ncc-tflite -> .dla -> neuronrt
-   dxrun / dx_engine -> PCIe -> DX-M1   PyArmNN 33 (Arm NN 23.08) GpuAcc,CpuAcc                                (blocked: /etc/nhw, see issue #2)
+   dxrun / dx_engine -> PCIe -> DX-M1   PyArmNN 33 (Arm NN 23.08) GpuAcc,CpuAcc                                (resolved: NeuroPilot 6, issue #2 closed)
         |                                    |                                            |
         +------------------------------------+--------------------------+-----------------+
                                                                         v
